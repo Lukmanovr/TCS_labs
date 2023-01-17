@@ -3,7 +3,7 @@ title: Lab Session 1
 type: docs
 BookToC: true
 ---
-# **Lab Session 1**
+# Lab Session 1
 
 ## Introductory notes
 
@@ -74,13 +74,7 @@ There are several operations that can be performed on formal languages, such as 
 
 A finite set is a set that has a finite number of elements. For example, the set of integers from 1 to 10 is a finite set because it has 10 elements. In contrast, the set of all integers is an infinite set because it has an infinite number of elements.  
 
-#### **Finite set**
-{{< katex display >}} A finite set can be described, at least in principle, by listing its elements: \(A = \{1, 2, 4, 8\}\)
-	says that \(A\) is the set whose elements are \(1, 2, 4,\) and \(8\).
-{{< /katex >}}
-
-For infinite (even for finite sets if they have more than just a few elements) sets ellipses \ldots are sometimes used to describe how the elements might be listed: \(
-      B = \{0, 3, 6, 9, \ldots\}\)
+#### **Finite set**  
 
 
 // Simple One

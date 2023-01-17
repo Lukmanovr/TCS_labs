@@ -49,7 +49,7 @@ title = 'TCS labs IU'
   # Enable "Edit this page" links for 'doc' page type.
   # Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
   # Edit path must point to root directory of repo.
-  BookEditPath = 'edit/main/exampleSite'
+  BookEditPath = 'tree/master/'
 
   # Configure the date format used on the pages
   # - In git information
