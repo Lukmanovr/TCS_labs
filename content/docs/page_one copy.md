@@ -1,5 +1,5 @@
 ---
-title: Lab Session 1
+title: Lab Session 2
 type: docs
 BookToC: true
 ---
@@ -77,7 +77,6 @@ A finite set is a set that has a finite number of elements. For example, the set
 #### **Finite set**  
 
 
-
 ```python
 # Define two sets
 A = {1, 2, 3, 4, 5}
@@ -92,8 +91,7 @@ print("A intersection B:", A & B)
 # Use the difference operator to find elements in A that are not in B
 print("A - B:", A - B)
 
-# Use the symmetric difference operator to find elements
-# that are in either A or B but not both
+# Use the symmetric difference operator to find elements that are in either A or B but not both
 print("A symmetric difference B:", A ^ B)
 
 # Check if A is a subset of B
@@ -105,7 +103,6 @@ print("Is A a proper subset of B:", A.issubset(B) and A != B)
 # Check if A is a superset of B
 print("Is A a superset of B:", A.issuperset(B))
 ```
-
 
 // Simple One
 

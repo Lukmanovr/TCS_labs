@@ -20,7 +20,7 @@ We look forward to working with you and exploring the exciting world of theoreti
 
 {{< hint info >}}
 **Disclaimer**  
-We are always looking for ways to improve the Theoretical Computer Science Lab session website and make it a valuable resource for our students. That's why we welcome and encourage your participation in making the website better.  
+We are always looking for ways to improve the Theoretical Computer Science Lab sessions website and make it a valuable resource for our students. That's why we welcome and encourage your participation in making the website better.  
 {{< /hint >}}
 There are a few ways you can get involved:
 - You can provide feedback on the website's content and organization.
