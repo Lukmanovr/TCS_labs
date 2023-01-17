@@ -3,6 +3,8 @@ title: Lab - 1
 type: docs
 toc: false
 ---
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/mathtex-script-type.min.js" integrity="sha384-jiBVvJ8NGGj5n7kJaiWwWp9AjC+Yh8rhZY3GtAX8yU28azcLgoRo4oukO87g7zDT" crossorigin="anonymous"></script>
+
 
 # **Lab Session 1**
 
@@ -13,7 +15,7 @@ Welcome to our laboratory exercises! Each week, you'll have the opportunity to w
 {{< hint danger >}}
 **Important information**  
 
-To make sure you're getting the most out of the lab sessions, we'll be assessing your performance in a few different ways:
+To make sure you're getting the most out of the lab sessions, we'll be assessing your performance in a few different ways and the final grade will be calculated as follows:
 
 - Mid-term Exam (20%)
 - Final Exam (30%)
@@ -53,14 +55,14 @@ actually copied.
 
 
 
-## Agenda
-{{< expand >}}
+## Lab #1 agenda
+
 
 - Preliminaries - Sets  
 - Formal Languages  
 - Operations on Formal Languages  
-{{< /expand >}}
 
+{{< expand >}}
 **Sets**:
 In mathematics, a set is a collection of distinct objects, considered as an object in its own right. Sets are one of the most fundamental concepts in mathematics, and can be used to model nearly everything in the mathematical universe.
 
@@ -69,11 +71,15 @@ A formal language is a set of finite sequences of symbols, also known as strings
 
 **Operations on Formal Languages**:
 There are several operations that can be performed on formal languages, such as union, intersection, complement, and concatenation. Union combines two languages into one, intersection finds the common strings between two languages, complement finds the strings that are in one language but not in another, and concatenation combines two languages by appending the strings of one language to the end of the strings of another.
+{{< /expand >}}
 
 ## Preliminaries - Sets
 
+A finite set is a set that has a finite number of elements. For example, the set of integers from 1 to 10 is a finite set because it has 10 elements. In contrast, the set of all integers is an infinite set because it has an infinite number of elements.  
+
+#### **Finite set**
 {{< katex display >}}
-f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
+A finite set can be described, at least in principle, by listing its elements: \(A = \{1, 2, 4, 8\}\) says that \(A\) is the set whose elements are \(1, 2, 4,\) and \(8\).
 {{< /katex >}}
 
 ## Display Mode Example
@@ -83,14 +89,14 @@ Here is some inline example: {{< katex >}}\pi(x){{< /katex >}}, rendered in the 
 f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
 {{< /katex >}}
 {{< section >}}
-## Kleen Star
+### **Kleen Star**
   
 {{< katex display >}}
 		L^* = \{x_1x_2...x_n \mid n \in \mathbb{N}, x_1,x_2,...,x_n \in L\} = \bigcup\limits_{n \in \mathbb{N}} L^n
         %L_1L_2 = \{xy \mid x \in L_1 \wedge L_2\}
 {{< /katex >}}
 
-## Power of n
+### **Power of n**
 {{< katex display >}}
         L^n = \{x_1x_2...x_n \mid x_i \in L \text{ for all }  1 \leq i \leq n\} 
         %L_1L_2 = \{xy \mid x \in L_1 \wedge L_2\}
