@@ -1,11 +1,8 @@
 ---
-title: Lab - 1
+title: Lab Session 1
 type: docs
-toc: false
+BookToC: true
 ---
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/mathtex-script-type.min.js" integrity="sha384-jiBVvJ8NGGj5n7kJaiWwWp9AjC+Yh8rhZY3GtAX8yU28azcLgoRo4oukO87g7zDT" crossorigin="anonymous"></script>
-
-
 # **Lab Session 1**
 
 ## Introductory notes
@@ -78,9 +75,31 @@ There are several operations that can be performed on formal languages, such as 
 A finite set is a set that has a finite number of elements. For example, the set of integers from 1 to 10 is a finite set because it has 10 elements. In contrast, the set of all integers is an infinite set because it has an infinite number of elements.  
 
 #### **Finite set**
-{{< katex display >}}
-A finite set can be described, at least in principle, by listing its elements: \(A = \{1, 2, 4, 8\}\) says that \(A\) is the set whose elements are \(1, 2, 4,\) and \(8\).
+{{< katex display >}} A finite set can be described, at least in principle, by listing its elements: \(A = \{1, 2, 4, 8\}\)
+	says that \(A\) is the set whose elements are \(1, 2, 4,\) and \(8\).
 {{< /katex >}}
+
+For infinite (even for finite sets if they have more than just a few elements) sets ellipses \ldots are sometimes used to describe how the elements might be listed: \(
+      B = \{0, 3, 6, 9, \ldots\}\)
+
+
+// Simple One
+
+{{< katex display >}}\pi(x){{< /katex >}}
+
+// Let's do formula
+
+{{< katex display >}}
+f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
+{{< /katex >}}
+
+// Let's get complicated
+
+{{< katex display >}}
+\frac{1}{\Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{\frac25 \pi}} = 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}} {1+\frac{e^{-8\pi}} {1+\cdots} } } }
+{{< /katex >}}
+
+
 
 ## Display Mode Example
 

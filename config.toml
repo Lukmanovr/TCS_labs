@@ -6,6 +6,7 @@ title = 'TCS labs IU'
 [markup]
 [markup.goldmark.renderer]
   unsafe = true
+  display = false
 
 [markup.tableOfContents]
   startLevel = 1
@@ -18,11 +19,12 @@ title = 'TCS labs IU'
   # (Optional, default true) Controls table of contents visibility on right side of pages.
   # Start and end levels can be controlled with markup.tableOfContents setting.
   # You can also specify this parameter per page in front matter.
-  BookToC = true
+  BookToC = false
 
   # (Optional, default none) Set the path to a logo for the book. If the logo is
   # /static/logo.png then the path would be logo.png
-  # BookLogo = 'logo.png'
+  # BookLogo = 'IU_logo.png'
+  BookLogo = 'logo_italic7.png'
 
   # (Optional, default none) Set leaf bundle to render as side menu
   # When not specified file structure and weights will be used
