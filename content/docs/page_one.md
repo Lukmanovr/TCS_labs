@@ -71,12 +71,11 @@ There are several operations that can be performed on formal languages, such as 
 {{< /expand >}}
 
 ## Preliminaries - Sets
+### **Finite set**  
 
 A finite set is a set that has a finite number of elements. For example, the set of integers from 1 to 10 is a finite set because it has 10 elements. In contrast, the set of all integers is an infinite set because it has an infinite number of elements.  
 
-#### **Finite set**  
-
-
+Below, is a python code that shows simple operations on sets:
 
 ```python
 # Define two sets
@@ -105,6 +104,43 @@ print("Is A a proper subset of B:", A.issubset(B) and A != B)
 # Check if A is a superset of B
 print("Is A a superset of B:", A.issuperset(B))
 ```
+
+A finite set can be described, at least in principle, by listing its elements: {{< katex >}} A = \{1, 2, 4, 8\} {{< /katex >}} 
+says that {{< katex >}} A {{< /katex >}} is the set whose elements are {{< katex >}} 1, 2, 4, 8. {{< /katex >}}
+
+### **Infinite set**  
+
+For infinite (even for finite sets if they have more than just a few elements) sets ellipses {{< katex >}}(\dots){{< /katex >}} are 
+sometimes used to describe how the elements might be listed. An ellipsis is a set of three periods {{< katex >}}(\dots){{< /katex >}} indicating an omission:
+{{< katex >}} B = \{0, 3, 6, 9, \ldots\} {{< /katex >}}
+
+A more reliable way is to give the property that characterises their elements (also called **set comprehension**).
+Set {{< katex >}} B = \{0, 3, 6, 9, \ldots\} {{< /katex >}} can be described as:
+{{< katex display >}} B = \{x \mid x  \text{ is a non-negative integer multiple of 3}\} {{< /katex >}}
+It reads: {{< katex >}} B {{< /katex >}} is the set of all {{< katex >}} x {{< /katex >}} such that {{< katex >}}x{{< /katex >}} is a non-negative integer multiple of {{< katex >}}3.{{< /katex >}}
+
+### **Sets (notation)**
+
+- For any set {{< katex >}}A{{< /katex >}} the statement that {{< katex >}}x{{< /katex >}} is an element of {{< katex >}}A{{< /katex >}} is written: {{< katex >}}x \in A{{< /katex >}}.
+- {{< katex >}}A \subseteq B{{< /katex >}} means that {{< katex >}}A{{< /katex >}} is a subset of {{< katex >}}B{{< /katex >}}: every element of {{< katex >}}A{{< /katex >}} is an element of {{< katex >}}B{{< /katex >}}.
+- {{< katex >}}\emptyset{{< /katex >}} denotes the empty set: the set with no elements.
+
+To show that two sets {{< katex >}}A{{< /katex >}} and {{< katex >}}B{{< /katex >}} are the same, we must show that {{< katex >}}A{{< /katex >}} and {{< katex >}}B{{< /katex >}} have exactly the same elements, i.e. {{< katex >}}A \subseteq B{{< /katex >}} and {{< katex >}}B \subseteq A{{< /katex >}}. 
+
+### **Sets (operations)**
+
+For two sets {{< katex >}}A{{< /katex >}} and {{< katex >}}B{{< /katex >}}, we can define their union {{< katex >}}A \cup B{{< /katex >}}, their intersection {{< katex >}}A \cap B{{< /katex >}}, and their difference {{< katex >}}A \backslash B{{< /katex >}} (sometimes denoted as {{< katex >}}A - B{{< /katex >}}), as follows {{< katex >}}(\vee, \wedge{{< /katex >}}denote the logical 'or' and logical 'and' respectively).
+
+- {{< katex >}} A \cup B = \{x \mid x \in A \vee x \in B\} {{< /katex >}}
+- {{< katex >}} A \cap B = \{x \mid x \in A \wedge x \in B\} {{< /katex >}}
+- {{< katex >}} A \backslash B = \{x \mid x \in A \wedge x \not \in B\} {{< /katex >}}
+
+### **Sets (Union of any number of sets) - Notation**
+
+If {{< katex >}}A_0, A_1, A_2, \ldots{{< /katex >}} are sets, the union of these sets can be denoted as
+{{< katex display>}}\bigcup \{A_i \mid i \ge 0\} = \{x \mid x \in A_i \text{ for at least one $i$ with }i \ge 0\}{{< /katex >}}
+or:
+{{< katex display >}}\bigcup_{i = 0}^\infty A_i{{< /katex >}}
 
 
 // Simple One
