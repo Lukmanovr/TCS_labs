@@ -1,4 +1,4 @@
-baseURL = 'http://localhost:1313/'
+baseURL = 'tcs-iu.netlify.app'
 languageCode = 'en-us'
 title = 'TCS labs IU'
 
