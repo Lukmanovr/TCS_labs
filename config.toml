@@ -1,9 +1,8 @@
 baseURL = 'tcs-iu.netlify.app'
 languageCode = 'en-us'
 title = 'TCS labs IU'
-[context.production.environment]
-  HUGO_VERSION = "0.109.0"
-  
+
+
 # Needed for mermaid/katex shortcodes
 [markup]
 [markup.goldmark.renderer]
