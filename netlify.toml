@@ -1,3 +1,8 @@
 [build]
 publish = "public"
-command = "hugo --minify"
+command = "hugo --theme hugo-book"
+
+[context.production.environment]
+HUGO_VERSION = "v0.109.0"
+HUGO_ENV = "production"
+HUGO_ENABLEGITINFO = "true"
