@@ -242,6 +242,9 @@ Is this statement true?
 L_1L_2 = L_2L_1
 {{< /katex >}}
 
+
+----
+
 ### **Exponential notation**
 
 The concatenation of {{< katex >}}k{{< /katex >}} copies of a single symbol {{< katex >}}a{{< /katex >}}, a single string {{< katex >}}s{{< /katex >}}, or a single language {{< katex >}}L{{< /katex >}} is defined as:  
@@ -269,41 +272,25 @@ Example:
 
 ### **Operations on Languages**
 
-
-// Simple One
-
-{{< katex display >}}\pi(x){{< /katex >}}
-
-// Let's do formula
-
-{{< katex display >}}
-f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
+- **Union**
+- **Intersection**
+- **Set difference**
+- **Complement**: if {{< katex >}}L{{< /katex>}} is a language over {{< katex >}}\Sigma,{{< /katex >}}
+{{< katex display>}}
+\overline{L}=\Sigma^* \backslash L
 {{< /katex >}}
-
-// Let's get complicated
-
-{{< katex display >}}
-\frac{1}{\Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{\frac25 \pi}} = 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}} {1+\frac{e^{-8\pi}} {1+\cdots} } } }
+- **Concatenation**: 
+{{< katex display>}}
+L_1L_2 = \{xy \mid x \in L_1, y \in L_2\}
 {{< /katex >}}
-
-
-
-## Display Mode Example
-
-Here is some inline example: {{< katex >}}\pi(x){{< /katex >}}, rendered in the same line. And below is `display` example, having `display: block`
+- **Power of n**
 {{< katex display >}}
-f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
+        L^n = \{x_1x_2...x_n \mid x_i \in L \text{ for all }  1 \leq i \leq n\} 
+        %L_1L_2 = \{xy \mid x \in L_1 \wedge L_2\}
 {{< /katex >}}
-{{< section >}}
-### **Kleen Star**
-  
+- **Kleen Star**
 {{< katex display >}}
 		L^* = \{x_1x_2...x_n \mid n \in \mathbb{N}, x_1,x_2,...,x_n \in L\} = \bigcup\limits_{n \in \mathbb{N}} L^n
         %L_1L_2 = \{xy \mid x \in L_1 \wedge L_2\}
 {{< /katex >}}
 
-### **Power of n**
-{{< katex display >}}
-        L^n = \{x_1x_2...x_n \mid x_i \in L \text{ for all }  1 \leq i \leq n\} 
-        %L_1L_2 = \{xy \mid x \in L_1 \wedge L_2\}
-{{< /katex >}}
