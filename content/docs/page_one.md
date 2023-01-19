@@ -336,3 +336,7 @@ In set theory, two sets are considered equal if and only if they have the same e
 The set {0, 1, 2, 1, 0} contains the elements 0, 1, 2 and each element appears more than one time. The set {1, 1, 1, 1, 0, 2, 2} also contains the same elements but in different order and also multiple times.
 However, the sets {0, 1, 2, 1, 0} and {1, 1, 1, 1, 0, 2, 2} are made with the same alphabet as both sets contain only integers from 0 to 2 as elements. 
 {{< /expand >}}
+
+{{< expand_katex >}}
+- {{< katex >}} \{0, 1\} = \{1, 0\}{{< /katex >}}
+{{< /expand_katex >}}

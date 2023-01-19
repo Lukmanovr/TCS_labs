@@ -12,6 +12,10 @@ title = 'TCS labs IU'
 [markup.tableOfContents]
   startLevel = 1
 
+[shortcodes]
+  src = "expand-katex.html"
+  name = "expand-katex"
+
 [params]
   # (Optional, default light) Sets color theme: light, dark or auto.
   # Theme 'auto' switches between dark and light modes based on browser/os preferences
