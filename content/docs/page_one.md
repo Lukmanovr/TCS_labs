@@ -162,6 +162,16 @@ The set which contains the elements which are either in set A or in set B but no
 - A set A is a **superset** of another set B if all elements of the set B are elements of the set A
 {{< /expand >}}  
 
+<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+<script defer src="https://pyscript.net/latest/pyscript.js"></script>
+<h3>Interactive Python Repl</h3>
+<div>
+        <a>Tip: press Shift-ENTER to evaluate a cell.</a>  
+        <a href="/docs/page_one/">[Clear All]</a>
+        <div>
+            <py-repl id="my-repl" auto-generate="true"> </py-repl>
+        </div>
+</div>
 
 ------
 
@@ -308,29 +318,29 @@ D = \{\{x\} \mid x \text{ is a non-negative integer such that }  x \leq 4 \}
 E = \{3i + 5j \mid i \text{ and } j  \text{ are non-negative integers}\}
 {{< /katex >}}   
 
-{{< expand "Solution #1" >}}
-The set D is a set, where each set in D is a singleton set containing a non-negative integer that is less than or equal to 4.
+{{< expand_katex "Solution #1" >}}
+The set {{< katex >}}D{{< /katex >}} is a set, where each set in {{< katex >}}D{{< /katex >}} is a singleton set containing a non-negative integer that is less than or equal to {{< katex >}}4{{< /katex >}}.
 A singleton set is a set that contains exactly one element.
-So, the set D is defined as follows:
-D = {{0}, {1}, {2}, {3}, {4}}
-Because the set D is a set of singletons and every singleton set of a non-negative integer such that x <= 4 will be included in this set.
+So, the set {{< katex >}}D{{< /katex >}} is defined as follows:
+{{< katex >}}D = \{\{0\}, \{1\}, \{2\}, \{3\}, \{4\}\}{{< /katex >}}
+Because the set {{< katex >}}D{{< /katex >}} is a set of singletons and every singleton set of a non-negative integer such that {{< katex >}}x \leq 4{{< /katex >}} will be included in this set.
 {{< /expand >}}
 {{< expand "Solution #2" >}}
 This set is infinite and all numbers can be expressed in the form 3i + 5j, for some non-negative integers i and j. Thus, 
 E = {..., 3i + 5j, ...}
-{{< /expand >}}
+{{< /expand_katex >}}
 
 2) Are the following statements true?
 - {{< katex >}} \{0, 1\} = \{1, 0\}{{< /katex >}}
 - {{< katex >}}\{0, 1, 2, 1, 0\} = \{1, 1, 1, 1, 0, 2, 2\}{{< /katex >}}
 
 
-{{< expand "Solution #2.1" >}}
+{{< expand_katex "Solution #1" >}}
 No, the statement is not true.
 In set theory, two sets are considered equal if and only if they have the same elements, regardless of the order of the elements or the number of times they appear.
-The set {0, 1} contains the elements 0 and 1 in that order, while the set {1, 0} contains the same elements but in a different order.{{< /expand >}}
+The set {{< katex >}}\{0, 1\}{{< /katex >}} contains the elements {{< katex >}}0{{< /katex >}} and {{< katex >}}1{{< /katex >}} in that order, while the set {{< katex >}}\{1, 0\}{{< /katex >}} contains the same elements but in a different order.{{< /expand_katex >}}
 
-{{< expand "Solution #2.2" >}}
+{{< expand "Solution #2" >}}
 No, the statement is not true.
 In set theory, two sets are considered equal if and only if they have the same elements, regardless of the order of the elements.
 The set {0, 1, 2, 1, 0} contains the elements 0, 1, 2 and each element appears more than one time. The set {1, 1, 1, 1, 0, 2, 2} also contains the same elements but in different order and also multiple times.
@@ -338,5 +348,8 @@ However, the sets {0, 1, 2, 1, 0} and {1, 1, 1, 1, 0, 2, 2} are made with the sa
 {{< /expand >}}
 
 {{< expand_katex >}}
-- {{< katex >}} \{0, 1\} = \{1, 0\}{{< /katex >}}
+{{< katex display >}}
+        L^n = \{x_1x_2...x_n \mid x_i \in L \text{ for all }  1 \leq i \leq n\} 
+        %L_1L_2 = \{xy \mid x \in L_1 \wedge L_2\}
+{{< /katex >}}
 {{< /expand_katex >}}
