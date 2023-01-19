@@ -290,7 +290,20 @@ L_1L_2 = \{xy \mid x \in L_1, y \in L_2\}
 {{< /katex >}}
 - **Kleen Star**
 {{< katex display >}}
-		L^* = \{x_1x_2...x_n \mid n \in \mathbb{N}, x_1,x_2,...,x_n \in L\} = \bigcup\limits_{n \in \mathbb{N}} L^n
-        %L_1L_2 = \{xy \mid x \in L_1 \wedge L_2\}
+L^* = \{x_1x_2...x_n \mid n \in \mathbb{N}, x_1,x_2,...,x_n \in L\} = \bigcup\limits_{n \in \mathbb{N}} L^n
+ %L_1L_2 = \{xy \mid x \in L_1 \wedge L_2\}
 {{< /katex >}}
 
+-----
+
+## **Exercises**
+  
+1) What are the sets {{< katex >}}D{{< /katex >}} and {{< katex >}}E{{< /katex >}}?  
+
+- {{< katex >}}
+D = \{\{x\} \mid x \text{ is a non-negative integer such that }  x \leq 4 \}
+{{< /katex >}}  
+
+- {{< katex >}}  
+E = \{3i + 5j \mid i \text{ and } j  \text{ are non-negative integers}\}
+{{< /katex >}}   
