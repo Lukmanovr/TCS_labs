@@ -182,10 +182,43 @@ For a set {{< katex >}}A{{< /katex >}}, the set of all subsets of {{< katex >}}A
 - Power set of set {{< katex >}}\{a, b, c\}{{< /katex >}} is 
 {{< katex display >}}\{\emptyset, \{a\}, \{b\}, \{c\}, \{a, b\}, \{a, c\}, \{b, c\}, \{a, b, c\}\}{{< /katex >}}
 
+For a set {{< katex >}}A{{< /katex >}}, the set {{< katex >}}\mathcal{P}(A){{< /katex >}} has exactly {{< katex >}}2^{n}{{< /katex >}} elements, where {{< katex >}}n{{< /katex >}} is the cardinality of {{< katex >}}A{{< /katex >}} (the cardinality of a set is a measure of a set's size, meaning the number of elements in the set).
 
 
 
 ------
+
+## **Overview of formal languages and their properties**
+
+A formal language is a set of strings (sequences of symbols) that are defined by a set of rules or grammar. These rules specify how the symbols can be combined to form valid strings in the language. Formal languages are used in many fields, such as mathematics, computer science, and linguistics, to precisely define and manipulate abstract concepts. Examples of formal languages include programming languages, mathematical notation, and formal logic.
+
+### **Notation and Terminology**
+
+
+**Alphabet:** a finite set of symbols, e.g. {{< katex >}}\{a, b\}{{< /katex >}}, or {{< katex >}}\{0, 1\}{{< /katex >}}. Normally denoted by {{< katex >}}\Sigma{{< /katex >}}  
+**String:** a string over an alphabet ({{< katex >}}\Sigma{{< /katex >}}) is a finite sequence of symbols in {{< katex >}}\Sigma{{< /katex >}}.  
+**Length:** for a string {{< katex >}}x{{< /katex >}}, {{< katex >}}\left\vert{x}\right\vert{{< /katex >}} is the number of symbols of {{< katex >}}x{{< /katex >}}.  
+**Empty string:** is the null string over {{< katex >}}\Sigma{{< /katex >}}. It is denoted as {{< katex >}}\epsilon{{< /katex >}}. By definition, {{< katex >}}\left\vert{\epsilon}\right\vert = 0{{< /katex >}}  
+**Set of all strings:** the set of all strings over {{< katex >}}\Sigma{{< /katex >}} is denoted by {{< katex >}}\Sigma^*{{< /katex >}}, e.g. for the alphabet {{< katex >}}A = \{a, b\}{{< /katex >}} \\
+{{< katex >}}A^* = \{\epsilon, a, b, aa, ab, ba, bb, aaa, aab, \ldots\}{{< /katex >}}
+
+### **Concatenation of strings**
+
+
+If {{< katex >}}x{{< /katex >}} and {{< katex >}}y{{< /katex >}} are two strings over an alphabet, the concatenation {{< katex >}}xy{{< /katex >}} (sometimes denoted as {{< katex >}}x\cdot y{{< /katex >}}) consists of the symbols of {{< katex >}}x{{< /katex >}} followed by those of {{< katex >}}y{{< /katex >}}:
+
+{{< katex display >}}x = ab{{< /katex >}}
+{{< katex display>}}y = bab{{< /katex >}}
+{{< katex display>}}xy = abbab{{< /katex >}}
+
+Concatenation is an associative operation: {{< katex >}}(xy)z = x(yz){{< /katex >}} for all possible strings {{< katex >}}x{{< /katex >}}, {{< katex >}}y{{< /katex >}}, and {{< katex >}}z{{< /katex >}}.
+
+### **Constructing new Languages**
+
+Languages are sets!
+
+
+
 // Simple One
 
 {{< katex display >}}\pi(x){{< /katex >}}
