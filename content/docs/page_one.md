@@ -202,6 +202,10 @@ A formal language is a set of strings (sequences of symbols) that are defined by
 **Set of all strings:** the set of all strings over {{< katex >}}\Sigma{{< /katex >}} is denoted by {{< katex >}}\Sigma^*{{< /katex >}}, e.g. for the alphabet {{< katex >}}A = \{a, b\}{{< /katex >}} \\
 {{< katex >}}A^* = \{\epsilon, a, b, aa, ab, ba, bb, aaa, aab, \ldots\}{{< /katex >}}
 
+
+------
+
+
 ### **Concatenation of strings**
 
 
@@ -213,10 +217,57 @@ If {{< katex >}}x{{< /katex >}} and {{< katex >}}y{{< /katex >}} are two strings
 
 Concatenation is an associative operation: {{< katex >}}(xy)z = x(yz){{< /katex >}} for all possible strings {{< katex >}}x{{< /katex >}}, {{< katex >}}y{{< /katex >}}, and {{< katex >}}z{{< /katex >}}.
 
+
+------
+
+
 ### **Constructing new Languages**
 
 Languages are sets!
 
+- Operations on languages are ways of constructing new languages: for two languages {{< katex >}}L_1{{< /katex >}} and {{< katex >}}L_2{{< /katex >}} over the alphabet {{< katex >}}\Sigma{{< /katex >}}, {{< katex >}}L_1 \cup L_2{{< /katex >}}, {{< katex >}}L_1 \cap L_2{{< /katex >}}, and {{< katex >}}L_1 \backslash L_2{{< /katex >}} are also languages over {{< katex >}}\Sigma{{< /katex >}}.
+- String operation of concatenation is also used to construct new languages: if {{< katex >}}L_1{{< /katex >}} and {{< katex >}}L_2{{< /katex >}} are both languages over {{< katex >}}\Sigma{{< /katex >}}, the concatenation of {{< katex >}}L_1{{< /katex >}} and {{< katex >}}L_2{{< /katex >}} is the language
+
+{{< katex display >}}
+L_1L_2 = \{xy \mid x \in L_1, y \in L_2\}
+{{< /katex >}}
+
+Example:
+{{< katex display >}}
+\{a, aa\}\{\epsilon, b, ab\} = \{a, ab, aab, aa, aab, aaab\}
+{{< /katex >}}
+
+Is this statement true?
+{{< katex display >}}
+L_1L_2 = L_2L_1
+{{< /katex >}}
+
+### **Exponential notation**
+
+The concatenation of {{< katex >}}k{{< /katex >}} copies of a single symbol {{< katex >}}a{{< /katex >}}, a single string {{< katex >}}s{{< /katex >}}, or a single language {{< katex >}}L{{< /katex >}} is defined as:  
+If {{< katex >}}k{{< /katex >}} = {{< katex >}}0,{{< /katex >}} then
+{{< katex display >}}a^k = \{\epsilon\}{{< /katex >}}
+
+If {{< katex >}}k{{< /katex >}} > {{< katex >}}0,{{< /katex >}} then
+{{< katex display>}}
+a^k = aa \ldots a
+{{< /katex >}}
+where there are {{< katex >}}k{{< /katex >}} occurrences of {{< katex >}}a{{< /katex >}}, similarly for {{< katex >}}s^k{{< /katex >}} and {{< katex >}}L^k{{< /katex >}}. In the case where {{< katex >}}L{{< /katex >}} is simply the alphabet {{< katex >}}\Sigma,{{< /katex >}} 
+{{< katex display >}}
+\Sigma^k = \{x \in \Sigma^* \mid  \left\vert{x}\right\vert = k \}
+{{< /katex >}}
+
+Example: 
+{{< katex display>}}
+\Sigma = \{0, 1\} \\
+\Sigma^2 = \{00, 01, 10, 11\}
+{{< /katex >}}
+
+
+-----
+
+
+### **Operations on Languages**
 
 
 // Simple One
