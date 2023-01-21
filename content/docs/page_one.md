@@ -186,7 +186,7 @@ The set which contains the elements which are either in set A or in set B but no
 - A set A is a **superset** of another set B if all elements of the set B are elements of the set A
 {{< /expand >}}  
 
-<iframe src="/pyscript-environment.html" width="100%" height="600px"></iframe>
+<iframe src="/pyscript-environment.html" width="100%" height="700px"></iframe>
 
 ------
 
