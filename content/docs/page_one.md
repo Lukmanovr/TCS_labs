@@ -154,7 +154,31 @@ print("Is A a proper subset of B:", A.issubset(B) and A != B)
 # Check if A is a superset of B
 print("Is A a superset of B:", A.issuperset(B))
 ```
-  
+An exemplary code for plotting
+```python
+import numpy as np
+import matplotlib.pyplot as plot
+# Get x values of the sine wave
+time        = np.arange(0, 10, 0.1);
+# Amplitude of the sine wave is sine of a variable like time
+amplitude   = np.sin(time)
+# Plot a sine wave using time and amplitude obtained for the sine wave
+plot.plot(time, amplitude)
+# Give a title for the sine wave plot
+plot.title('Sine wave')
+# Give x axis label for the sine wave plot
+plot.xlabel('Time')
+# Give y axis label for the sine wave plot
+plot.ylabel('Amplitude = sin(time)')
+plot.grid(True, which='both')
+plot.axhline(y=0, color='k')
+plot.show()
+# Display the sine wave
+plot
+```
+
+
+
 {{< expand "More" >}}
 - **Symmetric difference between two sets** - 
 The set which contains the elements which are either in set A or in set B but not in both is called the symmetric difference between two given sets.
@@ -162,16 +186,7 @@ The set which contains the elements which are either in set A or in set B but no
 - A set A is a **superset** of another set B if all elements of the set B are elements of the set A
 {{< /expand >}}  
 
-<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-<script defer src="https://pyscript.net/latest/pyscript.js"></script>
-<h3>Interactive Python Repl</h3>
-<div>
-        <a>Tip: press Shift-ENTER to evaluate a cell.</a>  
-        <a href="/docs/page_one/">[Clear All]</a>
-        <div>
-            <py-repl id="my-repl" auto-generate="true"> </py-repl>
-        </div>
-</div>
+<iframe src="/pyscript-environment.html" width="100%" height="600px"></iframe>
 
 ------
 
@@ -325,9 +340,9 @@ So, the set {{< katex >}}D{{< /katex >}} is defined as follows:
 {{< katex >}}D = \{\{0\}, \{1\}, \{2\}, \{3\}, \{4\}\}{{< /katex >}}
 Because the set {{< katex >}}D{{< /katex >}} is a set of singletons and every singleton set of a non-negative integer such that {{< katex >}}x \leq 4{{< /katex >}} will be included in this set.
 {{< /expand >}}
-{{< expand "Solution #2" >}}
-This set is infinite and all numbers can be expressed in the form 3i + 5j, for some non-negative integers i and j. Thus, 
-E = {..., 3i + 5j, ...}
+{{< expand_katex "Solution #2" >}}
+This set is infinite and all numbers can be expressed in the form {{< katex >}}3i + 5j,{{< /katex >}} for some non-negative integers {{< katex >}}i{{< /katex >}} and {{< katex >}}j{{< /katex >}}. Thus, 
+{{< katex >}}E = \{..., 3i + 5j, ...\}{{< /katex >}}
 {{< /expand_katex >}}
 
 2) Are the following statements true?
@@ -336,18 +351,20 @@ E = {..., 3i + 5j, ...}
 
 
 {{< expand_katex "Solution #1" >}}
-No, the statement is not true.
+Yes, the statement is true.
 In set theory, two sets are considered equal if and only if they have the same elements, regardless of the order of the elements or the number of times they appear.
 The set {{< katex >}}\{0, 1\}{{< /katex >}} contains the elements {{< katex >}}0{{< /katex >}} and {{< katex >}}1{{< /katex >}} in that order, while the set {{< katex >}}\{1, 0\}{{< /katex >}} contains the same elements but in a different order.{{< /expand_katex >}}
 
-{{< expand "Solution #2" >}}
-No, the statement is not true.
+{{< expand_katex "Solution #2" >}}
+Yes, the statement is true.
 In set theory, two sets are considered equal if and only if they have the same elements, regardless of the order of the elements.
-The set {0, 1, 2, 1, 0} contains the elements 0, 1, 2 and each element appears more than one time. The set {1, 1, 1, 1, 0, 2, 2} also contains the same elements but in different order and also multiple times.
-However, the sets {0, 1, 2, 1, 0} and {1, 1, 1, 1, 0, 2, 2} are made with the same alphabet as both sets contain only integers from 0 to 2 as elements. 
-{{< /expand >}}
+The set {{< katex >}}\{0, 1, 2, 1, 0\}{{< /katex >}} contains the elements {{< katex >}}0, 1, 2{{< /katex >}} and each element appears more than one time. The set {{< katex >}}\{1, 1, 1, 1, 0, 2, 2\}{{< /katex >}} also contains the same elements but in different order and also multiple times.
+However, the sets {{< katex >}}\{0, 1, 2, 1, 0\}{{< /katex >}} and {{< katex >}}\{1, 1, 1, 1, 0, 2, 2\}{{< /katex >}} are made with the same alphabet as both sets contain only integers from {{< katex >}}0{{< /katex >}} to {{< katex >}}2{{< /katex >}} as elements. 
+{{< /expand_katex >}}
 
-{{< expand_katex >}}
+{{< expand_katex "Large equation demo">}}
+
+This expand button can render large KaTeX equations together with Markdown!
 {{< katex display >}}
         L^n = \{x_1x_2...x_n \mid x_i \in L \text{ for all }  1 \leq i \leq n\} 
         %L_1L_2 = \{xy \mid x \in L_1 \wedge L_2\}
