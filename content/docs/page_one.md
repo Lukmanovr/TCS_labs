@@ -321,7 +321,9 @@ L^* = \{x_1x_2...x_n \mid n \in \mathbb{N}, x_1,x_2,...,x_n \in L\} = \bigcup\li
 
 -----
 
-## **Exercises**
+# **Exercises on sets and sets notation**
+
+## **Exercises (0)**
   
 1) What are the sets {{< katex >}}D{{< /katex >}} and {{< katex >}}E{{< /katex >}}?  
 
@@ -359,14 +361,113 @@ The set {{< katex >}}\{0, 1\}{{< /katex >}} contains the elements {{< katex >}}0
 Yes, the statement is true.
 In set theory, two sets are considered equal if and only if they have the same elements, regardless of the order of the elements.
 The set {{< katex >}}\{0, 1, 2, 1, 0\}{{< /katex >}} contains the elements {{< katex >}}0, 1, 2{{< /katex >}} and each element appears more than one time. The set {{< katex >}}\{1, 1, 1, 1, 0, 2, 2\}{{< /katex >}} also contains the same elements but in different order and also multiple times.
-However, the sets {{< katex >}}\{0, 1, 2, 1, 0\}{{< /katex >}} and {{< katex >}}\{1, 1, 1, 1, 0, 2, 2\}{{< /katex >}} are made with the same alphabet as both sets contain only integers from {{< katex >}}0{{< /katex >}} to {{< katex >}}2{{< /katex >}} as elements. 
+However, the sets {{< katex >}}\{0, 1, 2, 1, 0\}{{< /katex >}} and {{< katex >}}\{1, 1, 1, 1, 0, 2, 2\}{{< /katex >}} are made with the same alphabet as both sets contain only integers from {{< katex >}}0{{< /katex >}} to {{< katex >}}2{{< /katex >}} as elements.
+
 {{< /expand_katex >}}
 
-{{< expand_katex "Large equation demo">}}
 
-This expand button can render large KaTeX equations together with Markdown!
-{{< katex display >}}
-        L^n = \{x_1x_2...x_n \mid x_i \in L \text{ for all }  1 \leq i \leq n\} 
-        %L_1L_2 = \{xy \mid x \in L_1 \wedge L_2\}
-{{< /katex >}}
+
+-----
+
+## **Exercises (1)**
+
+Construct the power set for the following sets:
+- {{< katex >}}\{a, b\}{{< /katex >}}
+- {{< katex >}}\{0, 1\} \cup \{1, 2\}{{< /katex >}}
+- {{< katex >}}\{z\}{{< /katex >}}
+- {{< katex >}}\{0, 1, 2, 3, 4\} \cap \{1, 3, 5, a\}{{< /katex >}}
+- {{< katex >}}\{0, 1, 2, 3\} \backslash \{1, 3, 5, a\}{{< /katex >}}
+- {{< katex >}}\emptyset{{< /katex >}}
+
+{{< expand_katex "Solutions" >}}
+- The power set of the set {{< katex >}}\{a,b\}{{< /katex >}} is {{< katex >}}\{\{\}, \{a\}, \{b\}, \{a,b\}\}{{< /katex >}}
+- asdas
 {{< /expand_katex >}}
+
+Determine the following languages over the alphabet {{< katex >}}\Sigma = {0, 1}{{< /katex >}}
+- {{< katex >}}\Sigma^0{{< /katex >}}
+- {{< katex >}}\Sigma^4{{< /katex >}}
+- {{< katex >}}\mathcal{P}(\Sigma){{< /katex >}}
+- {{< katex >}}\mathcal{P}(\Sigma^*){{< /katex >}}
+
+----
+
+## **Exercises (2)**
+
+Find a possible alphabet for the following languages
+- The language {{< katex >}}L = \{oh, ouch, ugh\}{{< /katex >}}
+- The language {{< katex >}}L = \{apple, pear, 4711\}{{< /katex >}}
+- The language of all binary strings
+
+Determine what the Kleene star operation produces over the following alphabets:
+- {{< katex >}}\Sigma = \{0, 1\}{{< /katex >}}
+- {{< katex >}}\Sigma = \{a\}{{< /katex >}}
+- {{< katex >}}\Sigma = \emptyset\ {{< /katex >}} (the empty alphabet)
+
+----
+
+## **Exercises (3)**
+
+State the alphabet {{< katex >}}\Sigma{{< /katex >}} for the following languages:
+- {{< katex >}}L = \Sigma^* = \{\epsilon, 0, 1, 00, 01, 10, 11, 000, \ldots\}{{< /katex >}}
+- {{< katex >}}L = \Sigma^* = \{\epsilon, a, aa, aaa, aaaa, \ldots\}{{< /katex >}}
+
+Assuming that {{< katex >}}\Sigma =\{0, 1\}{{< /katex >}}, construct complement languages for the following:
+
+- {{< katex >}}\overline{\{010, 101, 11\}}{{< /katex >}}
+- {{< katex >}}\overline{\Sigma^* \backslash \{110\}}{{< /katex >}}
+
+State the following languages explicitly
+
+- {{< katex >}}\mathcal{P}({a, b}) \backslash \mathcal{P}({a, c}){{< /katex >}}
+- {{< katex >}}{x \mid x,y \in \mathbb{N} \wedge \exists y : y < 10 \wedge (y + 2 = x)}{{< /katex >}} ({{< katex >}}\mathbb{N}{{< /katex >}} is the set of all non-negative integers)
+
+----
+
+# **Exercises on Operations on Languages**
+
+
+## **Exercises (4)**
+
++ Let {{< katex >}}L=\{a^i, i \geq 0 \}{{< /katex >}} be a language over {{< katex >}}\Sigma=\{a, b\}{{< /katex >}}. Find {{< katex >}}\overline{L}{{< /katex >}} and {{< katex >}}L^*{{< /katex >}}
++ Let {{< katex >}}L_1{{< /katex >}}, {{< katex >}}L_2{{< /katex >}} be languages over {{< katex >}}\Sigma=\{a, b\}{{< /katex >}}. Find {{< katex >}}L_1L_2{{< /katex >}}
+   + {{< katex >}}L_1=\{\epsilon,a,aa\}{{< /katex >}}, {{< katex >}}L_2=\{aa,aaa\}{{< /katex >}}
+   + {{< katex >}}L_1=\{a,a^2, a^4\}{{< /katex >}}, {{< katex >}}L_2=\{b^0, b^2, b^3\}{{< /katex >}}
+
++ Let {{< katex >}}L=\{0,01,001\}{{< /katex >}}. Find {{< katex >}}L^2{{< /katex >}}.
++ Describe in plain English the following languages over {{< katex >}}\Sigma=\{a, b\}{{< /katex >}}:
+   + {{< katex >}}L = \{a, b\}^*{{< /katex >}}
+   + {{< katex >}}L = \{a\}^* \cup \{b\}^*{{< /katex >}}
+   + {{< katex >}}L = \{a\}^* \cap \{b\}^*{{< /katex >}}
+   + {{< katex >}}L = \{aa\}^* \backslash \{aaaa\}^*{{< /katex >}}
++ Write out in full the strings {{< katex >}}0^5, 0^31^3, (010)^2, (01)^30, 1^0{{< /katex >}}
+
+----
+
+
+## **Exercises (4)**
+
+Perform operations on the languages over {{< katex >}}\Sigma=\{0, 1\}{{< /katex >}}:
+
++ {{< katex >}} L_1 = \{0,1,00,11,000,111,...\}, {{< /katex >}}
+--
++ {{< katex >}} L_2 = \{0,1\}^*, {{< /katex >}}
+--
++ {{< katex >}} L_3=\{w \mid w \in \Sigma^*, |w|=1\}, {{< /katex >}}
+--
++ {{< katex >}} L_4=\{w \mid w \in \Sigma^*, |w|=2\}, {{< /katex >}}
+--
++ {{< katex >}} L_5=\{w \mid w \in \Sigma^*, |w| \geq 1\} {{< /katex >}}
+--
+   
+   1) {{< katex >}} L_1 \cup L_2, \quad L_3 \cup L_4 {{< /katex >}}
+
+   2) {{< katex >}} L_1 \cap L_2, \quad L_1 \cap L_3, \quad L_1 \cap L_4, \quad L_1 \cap L_5, \quad L_3 \cap L_4 {{< /katex >}}
+
+   3) {{< katex >}} L_1 \backslash L_2, \quad L_1 \backslash L_3, \quad L_3 \backslash L_4,\quad L_4 \backslash L_5, \quad L_5 \backslash L_4 {{< /katex >}}
+
+   4) {{< katex >}} \overline{L_1}, \quad \overline{L_2}, \quad \overline{L_3}, \quad \overline{L_5 \backslash L_4} {{< /katex >}}
+
+   5) {{< katex >}} L_1L_2, \quad L_3L_4, \quad L_4L_3 {{< /katex >}}
+
+   6) {{< katex >}} L_2^, \quad L_3^, \quad L_4^* {{< /katex >}}
