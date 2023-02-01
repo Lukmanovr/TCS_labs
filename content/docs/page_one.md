@@ -154,30 +154,6 @@ print("Is A a proper subset of B:", A.issubset(B) and A != B)
 # Check if A is a superset of B
 print("Is A a superset of B:", A.issuperset(B))
 ```
-An exemplary code for plotting
-```python
-import numpy as np
-import matplotlib.pyplot as plot
-# Get x values of the sine wave
-time        = np.arange(0, 10, 0.1);
-# Amplitude of the sine wave is sine of a variable like time
-amplitude   = np.sin(time)
-# Plot a sine wave using time and amplitude obtained for the sine wave
-plot.plot(time, amplitude)
-# Give a title for the sine wave plot
-plot.title('Sine wave')
-# Give x axis label for the sine wave plot
-plot.xlabel('Time')
-# Give y axis label for the sine wave plot
-plot.ylabel('Amplitude = sin(time)')
-plot.grid(True, which='both')
-plot.axhline(y=0, color='k')
-plot.show()
-# Display the sine wave
-plot
-```
-
-
 
 {{< expand "More" >}}
 - **Symmetric difference between two sets** - 
@@ -304,6 +280,7 @@ Example:
 {{< katex display>}}
 \overline{L}=\Sigma^* \backslash L
 {{< /katex >}}
+The complement consists of all strings not in the language!
 - **Concatenation**: 
 {{< katex display>}}
 L_1L_2 = \{xy \mid x \in L_1, y \in L_2\}
@@ -373,22 +350,53 @@ However, the sets {{< katex >}}\{0, 1, 2, 1, 0\}{{< /katex >}} and {{< katex >}}
 
 Construct the power set for the following sets:
 - {{< katex >}}\{a, b\}{{< /katex >}}
+{{< expand_katex "Solution" >}}
+The power set of the set {{< katex >}}\{a,b\}{{< /katex >}} is {{< katex >}}\{\{\}, \{a\}, \{b\}, \{a,b\}\}{{< /katex >}}
+{{< /expand_katex >}}
 - {{< katex >}}\{0, 1\} \cup \{1, 2\}{{< /katex >}}
+{{< expand_katex "Solution" >}}
+The power set of the set {{< katex >}}\{0,1\} \cup \{1,2\} {{< /katex >}} is: {{< katex >}}\{\{\}, \{0\}, \{1\}, \{2\}, \{0,1\}, \{0,2\}, \{1,2\}, \{0,1,2\}\}{{< /katex >}}
+{{< /expand_katex >}}
 - {{< katex >}}\{z\}{{< /katex >}}
+{{< expand_katex "Solution" >}}
+The power set of the set {{< katex >}}\{z\}{{< /katex >}} is: {{< katex >}}\{\{\},\{z\}\}{{< /katex >}}
+{{< /expand_katex >}}
 - {{< katex >}}\{0, 1, 2, 3, 4\} \cap \{1, 3, 5, a\}{{< /katex >}}
+{{< expand_katex "Solution" >}}
+The power set of the set {{< katex >}}\{0, 1, 2, 3, 4\} \cap \{1, 3, 5, a\}{{< /katex >}} is: {{< katex >}}\{\{\},\{1\},\{3\}, \{1,3\}\}{{< /katex >}}
+{{< /expand_katex >}}
 - {{< katex >}}\{0, 1, 2, 3\} \backslash \{1, 3, 5, a\}{{< /katex >}}
+{{< expand_katex "Solution" >}}
+The power set of the set {{< katex >}}\{0, 1, 2, 3, 4\} \backslash \{1, 3, 5, a\}{{< /katex >}} is: {{< katex >}}\{\{\},\{0\},\{2\}, \{0,2\}\}{{< /katex >}}
+{{< /expand_katex >}}
 - {{< katex >}}\emptyset{{< /katex >}}
-
-{{< expand_katex "Solutions" >}}
-- The power set of the set {{< katex >}}\{a,b\}{{< /katex >}} is {{< katex >}}\{\{\}, \{a\}, \{b\}, \{a,b\}\}{{< /katex >}}
-- asdas
+{{< expand_katex "Solution" >}}
+The power set of the set {{< katex >}}\emptyset{{< /katex >}} is: {{< katex >}}\{\emptyset\}{{< /katex >}}
 {{< /expand_katex >}}
 
 Determine the following languages over the alphabet {{< katex >}}\Sigma = {0, 1}{{< /katex >}}
+
 - {{< katex >}}\Sigma^0{{< /katex >}}
+{{< expand_katex "Solution" >}}
+{{< katex >}}\Sigma^0 = \{\epsilon\}{{< /katex >}}
+{{< /expand_katex >}}
+
 - {{< katex >}}\Sigma^4{{< /katex >}}
+{{< expand_katex "Solution" >}}
+{{< katex display >}}\Sigma^4 =   \{0000, 0001, 0010, 0011,\\ 0100, 0101, 0110, 0111,\\ 1000, 1001, 1010, 1011,\\ 1100, 1101, 1110, 1111\}{{< /katex >}}
+The set {{< katex >}}\Sigma^4{{< /katex >}} is the set of all 16 possible combinations: {{< katex >}}2^{A}{{< /katex >}}
+{{< /expand_katex >}}
+
 - {{< katex >}}\mathcal{P}(\Sigma){{< /katex >}}
+{{< expand_katex "Solution" >}}
+{{< katex display >}}\mathcal{P}(\Sigma) = \{\emptyset, \{0\}, \{1\}, \{0, 1\}\}{{< /katex >}}
+{{< /expand_katex >}}
+
 - {{< katex >}}\mathcal{P}(\Sigma^*){{< /katex >}}
+{{< expand_katex "Solution" >}}
+{{< katex >}} \mathcal{P}(\Sigma^*) = {{< /katex >}}(Infinite set which includes empty set and all combinations of 0s and 1s)
+{{< /expand_katex >}}
+
 
 ----
 
@@ -396,13 +404,37 @@ Determine the following languages over the alphabet {{< katex >}}\Sigma = {0, 1}
 
 Find a possible alphabet for the following languages
 - The language {{< katex >}}L = \{oh, ouch, ugh\}{{< /katex >}}
+{{< expand_katex "Solution" >}}
+The language {{< katex >}}L = \{oh, ouch, ugh\}{{< /katex >}}:  {{< katex >}}\Sigma = \{o, h, u, c, g\}{{< /katex >}}
+{{< /expand_katex >}}
+
 - The language {{< katex >}}L = \{apple, pear, 4711\}{{< /katex >}}
+{{< expand_katex "Solution" >}}
+The language {{< katex >}}L = \{apple, pear, 4711\}{{< /katex >}}: {{< katex >}}\Sigma = \{a, p, l, e, r, 4, 7, 1\}{{< /katex >}}
+{{< /expand_katex >}}
+
 - The language of all binary strings
+{{< expand_katex "Solution" >}}
+{{< katex >}}\Sigma = \{0, 1\}{{< /katex >}}
+{{< /expand_katex >}}
 
 Determine what the Kleene star operation produces over the following alphabets:
 - {{< katex >}}\Sigma = \{0, 1\}{{< /katex >}}
+{{< expand_katex "Solution" >}}
+{{< katex >}}\Sigma^* = \{0, 1\}{{< /katex >}}: All binary strings
+{{< /expand_katex >}}
+
 - {{< katex >}}\Sigma = \{a\}{{< /katex >}}
+{{< expand_katex "Solution" >}}
+{{< katex >}}\Sigma = \{a\}{{< /katex >}}: All strings which contain nothing but {{< katex >}}a's{{< /katex >}}
+{{< /expand_katex >}}
+
 - {{< katex >}}\Sigma = \emptyset\ {{< /katex >}} (the empty alphabet)
+{{< expand_katex "Solution" >}}
+{{< katex >}}\Sigma = \{\emptyset\}{{< /katex >}} (the empty alphabet): the language that contains only the empty string
+{{< /expand_katex >}}
+
+
 
 ----
 
@@ -410,42 +442,107 @@ Determine what the Kleene star operation produces over the following alphabets:
 
 State the alphabet {{< katex >}}\Sigma{{< /katex >}} for the following languages:
 - {{< katex >}}L = \Sigma^* = \{\epsilon, 0, 1, 00, 01, 10, 11, 000, \ldots\}{{< /katex >}}
+{{< expand_katex "Solution" >}}
+{{< katex >}}L = \Sigma^* = \{\epsilon, 0, 1, 00, 01, 10, 11, 000, \ldots\}: \Sigma = \{0, 1\}{{< /katex >}}
+{{< /expand_katex >}}
+
 - {{< katex >}}L = \Sigma^* = \{\epsilon, a, aa, aaa, aaaa, \ldots\}{{< /katex >}}
+{{< expand_katex "Solution" >}}
+{{< katex >}}L = \Sigma^* = \{\epsilon, a, aa, aaa, aaaa, \ldots\}: \Sigma = \{a\}{{< /katex >}}
+{{< /expand_katex >}}
 
 Assuming that {{< katex >}}\Sigma =\{0, 1\}{{< /katex >}}, construct complement languages for the following:
 
 - {{< katex >}}\overline{\{010, 101, 11\}}{{< /katex >}}
+{{< expand_katex "Solution" >}}
+{{< katex display >}}L = \{\epsilon, 0, 1, 00, 01, 10, 000, 001, 011, 100, 110, 111, 0000, 0001, \ldots\}{{< /katex >}}
+{{< /expand_katex >}}
+
+
 - {{< katex >}}\overline{\Sigma^* \backslash \{110\}}{{< /katex >}}
+{{< expand_katex "Solution" >}}
+{{< katex display >}} L = \{110\} {{< /katex >}}
+{{< /expand_katex >}}
+
 
 State the following languages explicitly
 
 - {{< katex >}}\mathcal{P}({a, b}) \backslash \mathcal{P}({a, c}){{< /katex >}}
-- {{< katex >}}{x \mid x,y \in \mathbb{N} \wedge \exists y : y < 10 \wedge (y + 2 = x)}{{< /katex >}} ({{< katex >}}\mathbb{N}{{< /katex >}} is the set of all non-negative integers)
+{{< expand_katex "Solution" >}}
+The expression represents the set difference between two power sets:
+{{< katex display >}} L = \{\{b\}, \{a, b\}\} {{< /katex >}}
+{{< /expand_katex >}}
+
+
+- {{< katex >}}\{x \mid x,y \in \mathbb{N} \wedge \exists y : y < 10 \wedge (y + 2 = x)\}{{< /katex >}} ({{< katex >}}\mathbb{N}{{< /katex >}} is the set of all non-negative integers)
+{{< expand_katex "Solution" >}}
+This mathematical expression states that "there is a set x such that x and y are elements of the set of non-negative integers and there exists a y such that y is less than 10 and y + 2 = x." In other words, x is any non-negative integer that can be obtained by adding 2 to a non-negative integer less than 10.
+{{< katex display >}} L = \{2, 3, 4, 5, 6, 7, 8, 9, 10, 11\} {{< /katex >}}
+{{< /expand_katex >}}
+
 
 ----
 
-# **Exercises on Operations on Languages**
+# **Exercises on operations on languages**
 
 
 ## **Exercises (4)**
 
 + Let {{< katex >}}L=\{a^i, i \geq 0 \}{{< /katex >}} be a language over {{< katex >}}\Sigma=\{a, b\}{{< /katex >}}. Find {{< katex >}}\overline{L}{{< /katex >}} and {{< katex >}}L^*{{< /katex >}}
+{{< expand_katex "Solution" >}}
+Let {{< katex >}}L=\{a^i, i \geq 0 \}{{< /katex >}}, {{< katex >}}\Sigma=\{a, b\}{{< /katex >}}. {{< katex >}}\\{{< /katex >}}
+The complement language: {{< katex >}}\overline{L}={{< /katex >}} all nonempty strings containing at least one b;
+{{< katex >}}\\{{< /katex >}}
+The Kleen star operation: {{< katex >}}L^*=\{a^i, i \geq 0 \}{{< /katex >}}
+{{< /expand_katex >}}
+
+
 + Let {{< katex >}}L_1{{< /katex >}}, {{< katex >}}L_2{{< /katex >}} be languages over {{< katex >}}\Sigma=\{a, b\}{{< /katex >}}. Find {{< katex >}}L_1L_2{{< /katex >}}
    + {{< katex >}}L_1=\{\epsilon,a,aa\}{{< /katex >}}, {{< katex >}}L_2=\{aa,aaa\}{{< /katex >}}
+   {{< expand_katex "Solution" >}}
+        {{< katex >}}\{\epsilon,a,aa\}\{aa,aaa\}=\{aa,aaa,aaaa,aaaaa\}{{< /katex >}}. {{< katex >}}\\{{< /katex >}}
+   {{< /expand_katex >}}
+
    + {{< katex >}}L_1=\{a,a^2, a^4\}{{< /katex >}}, {{< katex >}}L_2=\{b^0, b^2, b^3\}{{< /katex >}}
+        {{< expand_katex "Solution" >}}
+        {{< katex >}}\{a,a^2, a^4\}\{b^0, b^2, b^3\}=\{a,aa, aaaa\}\{\epsilon, bb, bbb\}={{< /katex >}}{{< katex >}}\\{{< /katex >}}
+        {{< katex >}}\{a,aa,aaaa,abb,aabb,aaaabb,abbb,aabbb,aaaabbb\}{{< /katex >}}
+        {{< /expand_katex >}}
 
 + Let {{< katex >}}L=\{0,01,001\}{{< /katex >}}. Find {{< katex >}}L^2{{< /katex >}}.
+        {{< expand_katex "Solution" >}}
+        {{< katex >}}\{0,01,001\}^2=\{00,001,0001,010,0101,01001,0010,00101,001001\}{{< /katex >}}{{< katex >}}\\{{< /katex >}}
+        {{< /expand_katex >}}
+
 + Describe in plain English the following languages over {{< katex >}}\Sigma=\{a, b\}{{< /katex >}}:
    + {{< katex >}}L = \{a, b\}^*{{< /katex >}}
-   + {{< katex >}}L = \{a\}^* \cup \{b\}^*{{< /katex >}}
-   + {{< katex >}}L = \{a\}^* \cap \{b\}^*{{< /katex >}}
-   + {{< katex >}}L = \{aa\}^* \backslash \{aaaa\}^*{{< /katex >}}
-+ Write out in full the strings {{< katex >}}0^5, 0^31^3, (010)^2, (01)^30, 1^0{{< /katex >}}
+        {{< expand_katex "Solution" >}}
+        {{< katex >}}L = \{a, b\}^*{{< /katex >}} - all strings of a's and b's, including empty string{{< katex >}}\\{{< /katex >}}
+        {{< /expand_katex >}}
 
+   + {{< katex >}}L = \{a\}^* \cup \{b\}^*{{< /katex >}}
+        {{< expand_katex "Solution" >}}
+        {{< katex >}}L = \{a\}^* \cup \{b\}^*{{< /katex >}} - empty string and strings of only a's or only b's{{< katex >}}\\{{< /katex >}}
+        {{< /expand_katex >}}
+
+   + {{< katex >}}L = \{a\}^* \cap \{b\}^*{{< /katex >}}
+        {{< expand_katex "Solution" >}}
+        {{< katex >}}L = \{a\}^* \cap \{b\}^*{{< /katex >}} - empty string {{< katex >}}\\{{< /katex >}}
+        {{< /expand_katex >}}
+
+   + {{< katex >}}L = \{aa\}^* \backslash \{aaaa\}^*{{< /katex >}}
+        {{< expand_katex "Solution" >}}
+        {{< katex >}}L = \{aa\}^* \backslash \{aaaa\}^*{{< /katex >}} - strings of even number of a's which is not a multiple of 4 {{< katex >}}\\{{< /katex >}}
+        {{< /expand_katex >}}
+
++ Write out in full the strings {{< katex >}}0^5, 0^31^3, (010)^2, (01)^30, 1^0{{< /katex >}}
+        {{< expand_katex "Solution" >}}
+        {{< katex >}}00000, 000111, 010010, 0101010, \epsilon{{< /katex >}}{{< katex >}}\\{{< /katex >}}
+        {{< /expand_katex >}}
 ----
 
 
-## **Exercises (4)**
+## **Exercises (5)**
 
 Perform operations on the languages over {{< katex >}}\Sigma=\{0, 1\}{{< /katex >}}:
 
@@ -459,15 +556,59 @@ Perform operations on the languages over {{< katex >}}\Sigma=\{0, 1\}{{< /katex 
 --
 + {{< katex >}} L_5=\{w \mid w \in \Sigma^*, |w| \geq 1\} {{< /katex >}}
 --
+
+{{< expand_katex "Simplified forms" >}}
+        {{< katex >}}L_1 = \{0,1,00,11,000,111,...\}{{< /katex >}}, {{< katex >}}\\{{< /katex >}}
+        {{< katex >}}L_2 = \{0,1\}^* = \{\epsilon,0,1,00,11,01,10,000,111,010,011,100,101,... \}{{< /katex >}}, {{< katex >}}\\{{< /katex >}}
+        {{< katex >}}L_3= \{w \mid w \in \Sigma^*, |w|=1\} = \{0,1\}{{< /katex >}}, {{< katex >}}\\{{< /katex >}}
+        {{< katex >}}L_4=\{w \mid w \in \Sigma^*, |w|=2\} = \{00,11,01,10\}{{< /katex >}},  {{< katex >}}\\{{< /katex >}}
+        {{< katex >}}L_5=\{w \mid w \in \Sigma^*, |w| \geq 1\} = \{0,1,00,11,01,10,000,111,010,011,100,101,...\} = L_2 \backslash \ \{\epsilon\}{{< /katex >}}{{< katex >}}\\{{< /katex >}}
+{{< /expand_katex >}}
+
    
    1) {{< katex >}} L_1 \cup L_2, \quad L_3 \cup L_4 {{< /katex >}}
+        {{< expand_katex "Solution" >}}
+        {{< katex >}} L_1 \cup L_2 = L_2 {{< /katex >}}{{< katex >}}\\{{< /katex >}}
+        {{< katex >}} L_3 \cup L_4 = \{0,1,00,11,01,10\} {{< /katex >}}
+        {{< /expand_katex >}}
 
    2) {{< katex >}} L_1 \cap L_2, \quad L_1 \cap L_3, \quad L_1 \cap L_4, \quad L_1 \cap L_5, \quad L_3 \cap L_4 {{< /katex >}}
+        {{< expand_katex "Solution" >}}
+        {{< katex >}}L_1 \cap L_2 = L_1{{< /katex >}}{{< katex >}}\\{{< /katex >}}
+        {{< katex >}}L_1 \cap L_3 = L_3{{< /katex >}}{{< katex >}}\\{{< /katex >}}
+        {{< katex >}}L_1 \cap L_4 = \{00,11\}{{< /katex >}}{{< katex >}}\\{{< /katex >}}
+        {{< katex >}}L_1 \cap L_5 = L_1{{< /katex >}}{{< katex >}}\\{{< /katex >}}
+        {{< katex >}}L_3 \cap L_4 = \emptyset{{< /katex >}}{{< katex >}}\\{{< /katex >}}
+        {{< /expand_katex >}}
 
    3) {{< katex >}} L_1 \backslash L_2, \quad L_1 \backslash L_3, \quad L_3 \backslash L_4,\quad L_4 \backslash L_5, \quad L_5 \backslash L_4 {{< /katex >}}
+        {{< expand_katex "Solution" >}}
+        {{< katex >}}L_1 \backslash L_2 =\emptyset{{< /katex >}}{{< katex >}}\\{{< /katex >}}
+        {{< katex >}}L_1 \backslash L_3 =\{00,11,000,111,...\}{{< /katex >}}{{< katex >}}\\{{< /katex >}}
+        {{< katex >}}L_3 \backslash L_4 = L_3 = \{0,1\}{{< /katex >}}{{< katex >}}\\{{< /katex >}}
+        {{< katex >}}L_4 \backslash L_5 = \emptyset{{< /katex >}}{{< katex >}}\\{{< /katex >}}
+        {{< katex >}}L_5 \backslash L_4 = \{w \mid w \in \Sigma^*, |w| = 1 \text{ or } |w| \geq 3\}{{< /katex >}}{{< katex >}}\\{{< /katex >}}
+        {{< /expand_katex >}}
+
 
    4) {{< katex >}} \overline{L_1}, \quad \overline{L_2}, \quad \overline{L_3}, \quad \overline{L_5 \backslash L_4} {{< /katex >}}
+        {{< expand_katex "Solution" >}}
+        {{< katex >}} \overline{L_1} = \{\epsilon, 01, 10, 010, 011, 100, 101, ...\}{{< /katex >}}{{< katex >}}\\{{< /katex >}}
+        {{< katex >}} \overline{L_2} = \emptyset{{< /katex >}}{{< katex >}}\\{{< /katex >}}
+        {{< katex >}} \overline{L_3} = \{\epsilon, 00,11,01,10,000,111,010,011,100,101,..\}{{< /katex >}}{{< katex >}}\\{{< /katex >}}
+        {{< katex >}} \overline{L_5 \backslash L_4} = L_4 \cup \{\epsilon\}{{< /katex >}}{{< katex >}}\\{{< /katex >}}
+        {{< /expand_katex >}}
 
    5) {{< katex >}} L_1L_2, \quad L_3L_4, \quad L_4L_3 {{< /katex >}}
+        {{< expand_katex "Solution" >}}
+        {{< katex >}} L_1L_2 = L_2\backslash \{\epsilon\}{{< /katex >}}{{< katex >}}\\{{< /katex >}}
+        {{< katex >}} L_3L_4 =\{000,011,001,010,100,111,101,110\}{{< /katex >}}{{< katex >}}\\{{< /katex >}}
+        {{< katex >}} L_4L_3 =  L_3L_4 =\{000,001,110,111,010,011,100,101\}{{< /katex >}}{{< katex >}}\\{{< /katex >}}
+        {{< /expand_katex >}}
 
-   6) {{< katex >}} L_2^, \quad L_3^, \quad L_4^* {{< /katex >}}
+   6) {{< katex >}} L_2^*, \quad L_3^*, \quad L_4^* {{< /katex >}}
+        {{< expand_katex "Solution" >}}
+        {{< katex >}} L_2^* = L_2 {{< /katex >}}{{< katex >}}\\{{< /katex >}}
+        {{< katex >}} L_3^* = L_2 {{< /katex >}}{{< katex >}}\\{{< /katex >}}
+        {{< katex >}} L_4^* = \{w \mid w \in \Sigma^*, |w|=2k, k \in \mathbb{N} \}{{< /katex >}}{{< katex >}}\\{{< /katex >}}
+        {{< /expand_katex >}}
