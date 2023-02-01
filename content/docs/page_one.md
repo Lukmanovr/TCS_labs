@@ -493,7 +493,8 @@ This mathematical expression states that "there is a set x such that x and y are
 Let {{< katex >}}L=\{a^i, i \geq 0 \}{{< /katex >}}, {{< katex >}}\Sigma=\{a, b\}{{< /katex >}}. {{< katex >}}\\{{< /katex >}}
 The complement language: {{< katex >}}\overline{L}={{< /katex >}} all nonempty strings containing at least one b;
 {{< katex >}}\\{{< /katex >}}
-The Kleen star operation: {{< katex >}}L^*=\{a^i, i \geq 0 \}{{< /katex >}}
+The Kleen star operation: {{< katex >}}L^*=\{a^i, i \geq 0 \}{{< /katex >}}{{< katex >}}\\{{< /katex >}}
+{{< katex >}}L^* = \{\epsilon, a, aa, aaa, aaaa, ...\}{{< /katex >}}
 {{< /expand_katex >}}
 
 
