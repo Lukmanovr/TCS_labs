@@ -467,7 +467,7 @@ Assuming that {{< katex >}}\Sigma =\{0, 1\}{{< /katex >}}, construct complement 
 
 State the following languages explicitly
 
-- {{< katex >}}\mathcal{P}({a, b}) \backslash \mathcal{P}({a, c}){{< /katex >}}
+- {{< katex >}}\mathcal{P}(\{a, b\}) \backslash \mathcal{P}(\{a, c\}){{< /katex >}}
 {{< expand_katex "Solution" >}}
 The expression represents the set difference between two power sets:
 {{< katex display >}} L = \{\{b\}, \{a, b\}\} {{< /katex >}}
