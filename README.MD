@@ -1,4 +1,4 @@
-# Theorecical Computer Science course at Innopolis University:
+# Theoretical Computer Science course at Innopolis University:
 This is a repo of [TCS course at the Innopolis University website](https://tcs-iu.netlify.app/). Feel free to contribute!
 
 Table of contents
