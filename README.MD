@@ -2,8 +2,12 @@
 This is a repo of [TCS course at the Innopolis University website](https://tcs-iu.netlify.app/). Feel free to contribute!
 
 Table of contents
-- [Theorecical Computer Science couse at Innopolis University:](#theorecical-computer-science-couse-at-innopolis-university)
+- [Theoretical Computer Science course at Innopolis University:](#theoretical-computer-science-course-at-innopolis-university)
   - [How to contribute](#how-to-contribute)
+  - [Shortcodes](#shortcodes)
+    - [LaTeX](#latex)
+    - [Mermaid (graphs)](#mermaid-graphs)
+    - [Other shortcodes](#other-shortcodes)
   - [Familiarize yourself with our techstack](#familiarize-yourself-with-our-techstack)
 
 
@@ -42,10 +46,61 @@ Now you can start contributing:
   ```
   *(Note for the experienced contributors) You can run `git push origin master -u` to make `origin master` your default branch to push and pull to.*
 
+
 **Important note!**
 
 Make sure to run [`git pull`](https://git-scm.com/docs/git-pull) before you make any new changes after you've pushed, so that you avoid creating merge conflicts.
   
+## Shortcodes
+This projects uses a handful of shortcodes. Shortcode *(in a nutshell)* is "mark" inside your markdown code that enables certain features within its code block. For example, you can define a codeblock of LaTeX code that renders LaTeX formulas. You can also define a codeblock that describes a structure of a graph. Below are example of these two.
+
+### LaTeX
+How to write in LaTeX:
+```md
+{{<katex>}}
+your latex formula
+{{</katex>}}
+```
+This produces an inline formula. If you want to center your formula, use `display` property like so:
+```md
+{{<katex display>}}
+your centered latex formula
+{{</katex>}}
+```
+[Latex cheatsheet](https://wch.github.io/latexsheet/latexsheet.pdf)
+
+### Mermaid (graphs)
+How to create graphs:
+1. [Take a look at Mermaid syntax](https://mermaid.js.org/intro/)
+2. Pick a graph you want to use
+3. Write neccesary code
+ 
+**Ex:**
+```md
+{{<mermaid>}}
+gitGraph
+  commit
+  commit
+  branch develop
+  commit
+  commit
+  commit
+  checkout main
+  commit
+  commit
+{{</mermaid>}}
+```
+This will produce a git graph. There are 12 other graph types you can use. Refer to [Mermaid documentation](https://mermaid.js.org/intro/) for examples.
+
+### Other shortcodes
+This project's shortcodes and their descriptions can be found in `layouts/shortcodes`. They all use the same syntax: 
+```
+{{<shortcode>}}
+...stuff/..
+{{</shortcode>}}
+```
+Try them out and see what you can build.
+
 ## Familiarize yourself with our techstack
 - [The world’s fastest framework for building websites | Hugo (gohugo.io)](https://gohugo.io/) - static website generator
 - [Introduction | Hugo Book (hugo-book-demo.netlify.app)](https://hugo-book-demo.netlify.app/) - Hugo book theme
