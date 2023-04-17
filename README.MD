@@ -4,6 +4,7 @@ This is a repo of [TCS course at the Innopolis University website](https://tcs-i
 Table of contents
 - [Theoretical Computer Science course at Innopolis University:](#theoretical-computer-science-course-at-innopolis-university)
   - [How to contribute](#how-to-contribute)
+  - [Pull requests](#pull-requests)
   - [Shortcodes](#shortcodes)
     - [LaTeX](#latex)
     - [Mermaid (graphs)](#mermaid-graphs)
@@ -40,16 +41,34 @@ Now you can start contributing:
   [`git commit -m "Your very informative message that describes the changes you've made"`](https://git-scm.com/docs/git-commit). 
 
   Note that this saves and documents changes on your machine only.
-- To propagate your changes to others, run
-  ```
-  git push origin master
-  ```
-  *(Note for the experienced contributors) You can run `git push origin master -u` to make `origin master` your default branch to push and pull to.*
-
 
 **Important note!**
 
 Make sure to run [`git pull`](https://git-scm.com/docs/git-pull) before you make any new changes after you've pushed, so that you avoid creating merge conflicts.
+
+## Pull requests
+Now that you have made your changes, you will need to properly submit them so that no merge conficts happen.<br>
+ To do so:
+- Switch to a new branch *(if you haven't done that already)*:
+  ```
+  $ git checkout -b <branch>
+  ```
+  Ex: `git checkout -b lab11`
+- If you have any changes left uncommited, commit them as ususal
+- Push your new branch to the server
+  ```
+  $ git push origin <branch>
+  ```
+  It should push the branch normally. If not, send the error to the group.
+- Now go to the [github repo](https://github.com/TCS-IU/TCS_labs)
+- Press ["Pull requests"](https://github.com/TCS-IU/TCS_labs/pulls)
+- Press ["New pull requests"](https://github.com/TCS-IU/TCS_labs/compare)
+- Select the **master** branch on the left, and **<branch>** on the right. Make sure **base** & **head** repos are the same *(that is TCS-IU/TCS_labs)*
+- Press "Create pull request"
+- Describe what have you modified, maybe provide some suggestions for future imporvements
+- Once done, press "Create pull request"
+- Done! Admins will review your work and merge your changes into the main repo soon  
+
   
 ## Shortcodes
 This projects uses a handful of shortcodes. Shortcode *(in a nutshell)* is "mark" inside your markdown code that enables certain features within its code block. For example, you can define a codeblock of LaTeX code that renders LaTeX formulas. You can also define a codeblock that describes a structure of a graph. Below are example of these two.
