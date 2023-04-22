@@ -1,0 +1,394 @@
+---
+title: Lab Session 12
+type: docs
+BookToC: true
+---
+
+## Lab #12 Agenda
+
+- Generative Grammars.
+- Chomsky Hierarchy.
+- Context-Free Grammars: Backus-Naur Form.
+
+
+# **Models**
+{{<columns>}}
+### Automata (operational models):
+- Models suitable to recognize/accept, translate, compute language: receive an input string and process it.
+<--->
+### Grammar (generative models):
+- Models suitable to describe how to generate a language: set of rules to build phrases of a language. 
+{{</columns>}}
+
+
+# **Grammars**
+- A grammar is a set of rules to produce strings.
+
+{{<hint>}}
+## *A grammar is a tuple*: {{<katex>}} \langle V_N, V_T, P, S \rangle {{</katex>}}, where: <br>
+
+{{<katex>}} V_N {{</katex>}} is the non-terminal alphabet; <br>
+{{<katex>}} V_T {{</katex>}} is the terminal alphabet; <br>
+{{<katex>}} P {{</katex>}} is the terminal alphabet; <br>
+{{<katex>}} S {{</katex>}} is the terminal alphabet; <br>
+{{<katex>}} V = V_N \cup V_T {{</katex>}} the alphabet; <br>
+{{<katex>}} P \subseteq \left(V^* \cdot V_N \cdot V^*\right) \times V^* {{</katex>}} is the (finite) set of rewriting rules of production;<br>
+{{<katex>}} S \in V_N {{</katex>}} is a particular element called axiom or initial symbol.<br>
+A grammar {{<katex>}} \langle V_N, V_T, P, S\rangle {{</katex>}} generates a language on {{<katex>}} V_T {{</katex>}}.
+
+**Terminal symbols are elementary symbols** - cannot be broken down into smaller units i.e. cannot be changed using the production rules of the grammar.
+
+**Non-terminal symbols** -  can be replaced by groups of terminal and  non-terminal symbols according to the production rules.
+
+## *Production Rule*
+
+{{<katex>}} Let G = \langle V_N, V_T, P, S\rangle {{</katex>}} be a grammar.
+A production rule {{<katex>}} \alpha \rightarrow \beta {{</katex>}} is an element of P where
+{{<katex>}}\alpha \in V^* \cdot V_N \cdot V^*{{</katex>}} is a sequence of symbols including at least one non-terminal  symbol;
+{{<katex>}}\beta \in V^*{{</katex>}} is a (potentially empty) sequence of (terminal or non-terminal) symbols. 
+
+
+{{< /hint >}}
+
+
+
+{{<hint>}}
+# **Chomsky Hierarchy**
+
+## Grammars are classified according to the form of their productions. Chomsky classified grammars in four types:
+
+|Type | Grammar|
+| :---: | :---: |
+|type 3 | Regular grammars|
+|type 2 | Context-Free grammars|
+|type 1 | Context-Sensitive grammars|
+|type 0 | Unrestricted grammars|
+
+{{</hint>}}
+
+
+
+
+# **Strictly Regular grammars** *(type 3)*
+Production rules restricted to a single non-terminal on the left-hand side and a right-hand side consisting of a single terminal, possibly
+- followed by a single non-terminal - right grammar
+- preceded by a single non-terminal - left grammar
+
+## *Example*:
+Generate language with the strings of alternating a's and b's
+{{<katex>}} V_N = \{S, A, B\}; \hspace{0.2cm} V_T = \Sigma_1{{</katex>}} = \{a, b\}
+
+
+
+# Set of  Production rules P:
+- {{<katex>}} S \rightarrow A {{</katex>}}
+- {{<katex>}} S \rightarrow B {{</katex>}}
+- {{<katex>}} A \rightarrow {{</katex>}} a{{<katex>}} B {{</katex>}}
+- {{<katex>}} A \rightarrow \epsilon {{</katex>}}
+- {{<katex>}} B \rightarrow {{</katex>}} b{{<katex>}} A {{</katex>}}
+- {{<katex>}} B \rightarrow \epsilon {{</katex>}}
+
+
+# **Strictly Regular grammars** *(type 3)*
+{{<hint info>}}
+## *Strictly Right regular grammar*
+A right regular grammar is a formal grammar {{<katex>}} \langle V_N, V_T, P, S \rangle {{</katex>}} such that all the production rules in P are of one of the following forms:
+- {{<katex>}} A \rightarrow b{{</katex>}}, where {{<katex>}}A \in V_N{{</katex>}} and {{<katex>}}b \in V_T{{</katex>}}
+- {{<katex>}} A \rightarrow bB{{</katex>}}, where {{<katex>}}A, B \in V_N{{</katex>}} and {{<katex>}}b \in V_T{{</katex>}}
+- {{<katex>}} A \rightarrow \epsilon{{</katex>}}, where {{<katex>}}A \in V_N{{</katex>}} and {{<katex>}}\epsilon{{</katex>}} denotes the empty string.
+{{</hint>}}
+
+{{<hint warning>}}
+## *Strictly Left regular grammar* 
+A left regular grammar is a formal grammar {{<katex>}} \langle V_N, V_T, P, S\rangle{{</katex>}} such that all the production rules in P are of one of the following forms:
+- {{<katex>}}A \rightarrow b{{</katex>}}, where {{<katex>}}A \in V_N{{</katex>}} and {{<katex>}}b \in V_T{{</katex>}}
+- {{<katex>}}A \rightarrow B{{</katex>}}b, where {{<katex>}}A, B \in V_N{{</katex>}} and {{<katex>}}b \in V_T{{</katex>}}
+- {{<katex>}}A \rightarrow \epsilon{{</katex>}}, where {{<katex>}}A \in V_N{{</katex>}} and {{<katex>}}\epsilon{{</katex>}} denotes the empty string.
+{{</hint>}}
+
+
+# **Extended regular grammars**
+
+## *Extended Right regular grammar*
+{{<hint info>}}
+A left regular grammar is a formal grammar {{<katex>}} \langle V_N, V_T, P, S\rangle{{</katex>}} such that all the production rules in P are of one of the following forms:
+- {{<katex>}}A \rightarrow b{{</katex>}}, where {{<katex>}}A \in V_N{{</katex>}} and {{<katex>}}b \in V_T{{</katex>}}
+- {{<katex>}}A \rightarrow wB{{</katex>}}, where {{<katex>}}A, B \in V_N{{</katex>}} and {{<katex>}}w \in V_T^*{{</katex>}}
+- {{<katex>}}A \rightarrow \epsilon{{</katex>}}, where {{<katex>}}A \in V_N{{</katex>}} and {{<katex>}}\epsilon{{</katex>}} denotes the empty string.
+{{</hint>}}
+  
+{{<hint warning>}}
+## *Extended Left regular grammar*
+A left regular grammar is a formal grammar {{<katex>}}\langle V_N, V_T, P, S\rangle{{</katex>}} such that all the production rules in P are of one of the following forms:
+- {{<katex>}}A \rightarrow b{{</katex>}}, where {{<katex>}}A \in V_N{{</katex>}} and {{<katex>}}b \in V_T{{</katex>}}
+- {{<katex>}}A \rightarrow Bw{{</katex>}}, where {{<katex>}}A, B \in V_N{{</katex>}} and {{<katex>}}w \in V_T^*{{</katex>}}
+- {{<katex>}}A \rightarrow \epsilon{{</katex>}}, where {{<katex>}}A \in V_N{{</katex>}} and {{<katex>}}\epsilon{{</katex>}} denotes the empty string.
+{{</hint>}}
+
+
+
+
+# **Exercises**
+Define **Strictly Regular grammars** that produce the following languages over the alphabet {{<katex>}}\Sigma_1{{</katex>}} = {{<katex>}}\{a, b\}{{</katex>}}, {{<katex>}}\Sigma_2 = \{0, 1\}{{</katex>}}  
+- {{<katex>}}L_1 = \{0,1\}^*{{</katex>}}
+- {{<katex>}}L_2 = \{(aab \hspace{0.2cm} | \hspace{0.2cm} bba)^*\}{{</katex>}} 
+
+## Homework:
+- {{<katex>}}L_3 = \{(aa \hspace{0.2cm} | \hspace{0.2cm} bb)^*aa \}{{</katex>}}
+- {{<katex>}}L_4 = \{(00^* 11^*)\}{{</katex>}}
+
+
+
+# **Solutions**
+{{<details "Solutions">}}
+{{<tabs "1">}}
+
+{{<tab "Solutions L1">}} 
+{{<katex display>}} L_1 = \{0,1\}^* {{</katex>}}
+{{<katex>}}V_N = {S}; \hspace{0.2cm} V_T = \Sigma_2 = \{0,1\}{{</katex>}} 
+Set of  Production rules P: 
+- {{<katex>}}S \rightarrow \epsilon{{</katex>}}
+- {{<katex>}}S \rightarrow 0S{{</katex>}}
+- {{<katex>}}S \rightarrow 1S{{</katex>}}
+{{</tab>}}
+
+{{<tab "Solutions L2">}} 
+{{<katex display>}}L_2 = \{(aab \hspace{0.2cm} |\hspace{0.2cm} bba)^*\}{{</katex>}}
+{{<katex>}}V_N = \{S, A, B, F, E\}; \hspace{0.2cm} V_T = \Sigma_1 = \{a, b\} {{</katex>}}
+
+Set of  Production rules P:
+- {{<katex>}} S \rightarrow \epsilon{{</katex>}}
+- {{<katex>}}S \rightarrow aA{{</katex>}}
+- {{<katex>}}S \rightarrow bB{{</katex>}}
+- {{<katex>}}A \rightarrow aF{{</katex>}}
+- {{<katex>}}F \rightarrow bS{{</katex>}}
+- {{<katex>}}B \rightarrow bE{{</katex>}}
+- {{<katex>}}E \rightarrow aS{{</katex>}}
+{{</tab>}}
+
+{{<tab "Solutions L3">}}
+{{<katex display>}}L_3 = \{(aa \hspace{0.2cm} |\hspace{0.2cm} bb)^*aa \}{{</katex>}}
+{{<katex>}}V_N = \{S, A, B, X\}; \hspace{0.2cm} V_T = \Sigma_1 = \{a, b\}{{</katex>}}
+Set of  Production rules P:
+- {{<katex>}} S  \rightarrow aA|bB|aX{{</katex>}}
+- {{<katex>}}A\rightarrow aS {{</katex>}}
+- {{<katex>}}B\rightarrow bS {{</katex>}}
+- {{<katex>}} X\rightarrow a {{</katex>}}
+{{</tab>}}
+
+{{<tab "Solutions L4">}}
+{{<katex display>}}L_4 = \{(00^* 11^*)\} {{</katex>}}
+{{<katex>}}V_N = \{S,A,B\}; \hspace{0.2cm} V_T = \Sigma = \{0,1\}{{</katex>}}
+- {{<katex>}}S \rightarrow 0A{{</katex>}}
+- {{<katex>}}A \rightarrow 0A|1B{{</katex>}} 
+- {{<katex>}}B \rightarrow 1B| \epsilon{{</katex>}}
+{{</tab>}}
+{{</tabs>}}
+{{</details>}}
+
+
+
+# **Context-Free grammars** *(type 2)*
+Defined by rules of the form {{<katex>}}A \rightarrow \gamma{{</katex>}} where {{<katex>}}A{{</katex>}} is a non-terminal and {{<katex>}}\gamma{{</katex>}} is a string of terminals and non-terminals. <br>
+## *Example*
+Generate language with the {{<katex>}}a^nb^n{{</katex>}} where {{<katex>}}n>0{{</katex>}}
+{{<katex>}}V_N = \{S\}; \hspace{0.2cm} V_T = \Sigma_1 = \{a, b\}{{</katex>}} <br>
+Set of  Production rules P = \{{{<katex>}} S \rightarrow {{</katex>}} {{<katex>}}aSb{{</katex>}}  {{<katex>}}|{{</katex>}}  {{<katex>}}ab{{</katex>}}\}
+
+
+
+## **Exercises**
+Define context-free grammars that produce the following languages over the alphabet {{<katex>}}\Sigma = \{a, b\}{{</katex>}}:   
+- Language of palindromes strings
+{{<katex>}}L_1 = \{w ∈ \{a, b\}^∗| w = w^R\}{{</katex>}}
+- {{<katex>}}L_2{{</katex>}}=\{{{<katex>}}a^ib^jc^k | {{</katex>}} i, j, k{{<katex>}} \geq{{</katex>}} 0 and i=j or i=k\}
+## Homework:
+- {{<katex>}}L_3{{</katex>}} = Generate language with alternating a's and b's
+- {{<katex>}}L_4 = \{a^nb^nc^m \mid n,m>0\} \cup \{a^nb^mc^m \mid n,m>0\}{{</katex>}}
+
+
+
+{{<details "Solutions">}}
+{{<tabs "2">}}
+
+{{<tab "Solution L1">}}
+{{<katex display>}}L_1 = \{w ∈ \{a, b\}^∗ | w = w^R\}{{</katex>}}
+{{<katex>}}V_N = \{S, O, E\}; \hspace{0.2cm} V_T = \Sigma = \{a, b\}{{</katex>}}
+Set of  Production rules P: <br>
+- {{<katex>}}S \rightarrow O \hspace{0.2cm} | \hspace{0.2cm} E{{</katex>}}
+- {{<katex>}}E \rightarrow  \epsilon \hspace{0.2cm} |\hspace{0.2cm}  aEa \hspace{0.2cm} \hspace{0.2cm} | \hspace{0.2cm} bEb{{</katex>}}
+- {{<katex>}}O \rightarrow a \hspace{0.2cm}|\hspace{0.2cm} b \hspace{0.2cm} | \hspace{0.2cm} aOa\hspace{0.2cm} |\hspace{0.2cm} bOb{{</katex>}}
+or:
+- {{<katex>}}S \rightarrow aSa | bSb | a | b | e {{</katex>}}
+{{</tab>}}
+
+
+{{<tab "Solution L2">}}
+{{<katex display>}}L_2= \{a^ib^jc^k |  i, j, k \geq 0 \hspace{0.1cm} and \hspace{0.1cm} i=j \hspace{0.1cm} or \hspace{0.1cm} i=k\}{{</katex>}} <br>
+{{<katex>}}V_N = \{S, X, Y, W, Z \}, \hspace{0.2cm} V_T = \Sigma = \{a, b\} {{</katex>}}
+Set of  Production rules P:<br>
+- {{<katex>}}S \rightarrow XY \hspace{0.2cm} | \hspace{0.2cm} W{{</katex>}}
+- {{<katex>}}X \rightarrow aXb \hspace{0.2cm} | \hspace{0.2cm} \epsilon{{</katex>}}
+- {{<katex>}}Y \rightarrow cY \hspace{0.2cm} | \hspace{0.2cm} \epsilon{{</katex>}}
+- {{<katex>}}W \rightarrow aWc \hspace{0.2cm} | \hspace{0.2cm} Z{{</katex>}}      
+- {{<katex>}}Z \rightarrow bZ \hspace{0.2cm} | \hspace{0.2cm} \epsilon{{</katex>}}
+{{</tab>}}
+
+{{<tab "Solutions L3">}}
+{{<katex>}}L_3, {{</katex>}} Generate language with alternating a's and b's
+{{<katex>}}V_N = \{ S,A,B\}; \hspace{0.2cm} V_T = \Sigma_1 = \{a, b\} {{</katex>}}
+- {{<katex>}}S \rightarrow bB|aA|\epsilon{{</katex>}}
+- {{<katex>}}A \rightarrow bB| \epsilon{{</katex>}}
+- {{<katex>}}B \rightarrow aA| \epsilon{{</katex>}} 
+{{</tab>}}
+
+
+{{<tab "Solutions L4">}}
+{{<katex display>}}
+L_4 = \{a^nb^nc^m \mid n,m>0\} \cup \{a^nb^mc^m \mid n,m>0\}
+{{</katex>}}
+{{<katex>}}V_N = \{S,M,N,A,C\}; V_T = \Sigma = \{a,b,c\} {{</katex>}}
+- {{<katex>}}S \rightarrow aNbC|AbMc{{</katex>}}
+- {{<katex>}}N \rightarrow aNb| \epsilon{{</katex>}}
+- {{<katex>}}M \rightarrow bMc| \epsilon{{</katex>}}
+- {{<katex>}}C \rightarrow cC|\epsilon{{</katex>}}
+- {{<katex>}}A \rightarrow aA| \epsilon{{</katex>}}
+{{</tab>}}
+{{</tabs>}}
+{{</details>}}
+
+
+# **Context-Sensitive grammars** *(type 1)*
+The rules of the form {{<katex>}}\alpha A \beta \rightarrow \alpha \gamma \beta{{</katex>}}, where {{<katex>}}A{{</katex>}} is a non-terminal and {{<katex>}}\alpha{{</katex>}}, {{<katex>}}\beta{{</katex>}} and {{<katex>}}\gamma{{</katex>}} are strings of terminals and non-terminals.
+- {{<katex>}}\gamma{{</katex>}} must be non-empty
+- The rule {{<katex>}} S\rightarrow\epsilon{{</katex>}} is allowed if S does not appear on the right side of any rule
+
+
+## **Context-Sensitive grammars** *(type 1)*    
+The rules of the form {{<katex>}}\alpha A \beta \rightarrow \alpha \gamma \beta{{</katex>}}, where {{<katex>}}A{{</katex>}} is a non-terminal and {{<katex>}}\alpha{{</katex>}}, {{<katex>}}\beta{{</katex>}} and {{<katex>}}\gamma{{</katex>}} are strings of terminals and non-terminals.
+- {{<katex>}}\gamma{{</katex>}} must be non-empty
+- The rule {{<katex>}}S\rightarrow\epsilon{{</katex>}} is allowed if S does not appear on the right side of any rule
+
+## *Example*
+Generate language {{<katex>}}\{A^nB^nC^n | n > 0\}{{</katex>}}            
+- {{<katex>}}S \rightarrow {{</katex>}} a{{<katex>}}BC{{</katex>}}
+- {{<katex>}}S \rightarrow  aSBC{{</katex>}}
+- {{<katex>}}CB \rightarrow CZ{{</katex>}}
+- {{<katex>}}CZ \rightarrow BZ{{</katex>}}
+- {{<katex>}}BZ \rightarrow BC{{</katex>}}
+- a{{<katex>}}B \rightarrow {{</katex>}} ab
+- b{{<katex>}}B \rightarrow {{</katex>}} bb
+- b{{<katex>}}C \rightarrow {{</katex>}} bc
+- c{{<katex>}}C \rightarrow {{</katex>}} cc
+
+
+
+## **Exercises**
+Define context-sensitive grammars that produce the following languages:
+- {{<katex>}}L_1 = \{a^ib^jc^id^j \hspace{0.2cm}|\hspace{0.2cm} i,j \geq 1\} {{</katex>}}      
+- {{<katex>}}L_2 = \{WW \hspace{0.2cm}|\hspace{0.2cm} W ∈ \{a, b\}^∗\}{{</katex>}}
+*Homework:*       
+- {{<katex>}}L_3{{</katex>}} = {{<katex>}} \{W ∈ \{a, b, c\}^∗|{{</katex>}} {{<katex>}}\#(a) = \#(b) = \#(c){{</katex>}}  and {{<katex>}}\#(a) ≥1 {{</katex>}} \}
+
+        
+
+{{<details "Solutions">}}
+{{<tabs "3">}}
+
+{{<tab "Solutions L1">}}
+{{<katex display>}}L_1 = \{a^ib^jc^id^j \hspace{0.2cm}|\hspace{0.2cm} i,j \geq 1\}{{</katex>}}
+
+{{<katex>}}V_N = \{S,X,B,C, Y,Z\}; \hspace{0.2cm}V_T = \Sigma = \{a,b\} {{</katex>}}
+Set of  Production rules P:
+- {{<katex>}}S \rightarrow XY{{</katex>}}
+- {{<katex>}}X \rightarrow aXC | aC{{</katex>}}
+- {{<katex>}}Y \rightarrow BYd | Bd{{</katex>}}
+- {{<katex>}}CB \rightarrow CZ{{</katex>}}
+- {{<katex>}}CZ \rightarrow BZ{{</katex>}}
+- {{<katex>}}BZ \rightarrow BC{{</katex>}}
+- {{<katex>}}aB \rightarrow ab{{</katex>}}
+- {{<katex>}}Cd\rightarrow cd{{</katex>}}
+ {{</tab>}}
+
+
+
+{{<tab "Solutions L2.1">}}
+
+{{<katex display>}}L_2= \{WW | W ∈ \{a, b\}^∗\} {{</katex>}}
+{{<katex>}}V_N = \{S, A, B, C, D, E\}; \hspace{0.2cm} V_T = \Sigma = \{a, b\}{{</katex>}}
+
+
+Set of  Production rules P: 
+
+- {{<katex>}}S    \rightarrow   \epsilon | CD| EF{{</katex>}}
+- {{<katex>}}C    \rightarrow   aCA | bCB | a{{</katex>}}
+- {{<katex>}}D    \rightarrow   aEA | bEB | b{{</katex>}}
+- {{<katex>}}AD   \rightarrow   XD{{</katex>}}
+- {{<katex>}}BD   \rightarrow   YD{{</katex>}}
+- {{<katex>}}AF   \rightarrow   XF{{</katex>}}
+- {{<katex>}}BF   \rightarrow   YF{{</katex>}}
+- {{<katex>}}AX   \rightarrow   VX {{</katex>}}
+- {{<katex>}}VX   \rightarrow   VW {{</katex>}}
+- {{<katex>}}VW   \rightarrow   VA{{</katex>}}
+- {{<katex>}}VA   \rightarrow   XA {{</katex>}}
+- {{<katex>}}BX   \rightarrow   WX{{</katex>}}
+- {{<katex>}}WX   \rightarrow   WV   {{</katex>}}
+
+Continue..on next slide
+{{</tab>}}
+
+
+
+{{<tab "Solutions L2.2">}}
+{{<katex>}}L_1= \{WW | W ∈ \{a, b\}^∗\}{{</katex>}}
+
+
+{{<katex>}}V_N = \{S, A, B, C, D, E\}; \hspace{0.2cm} V_T = \Sigma$ = \{a, b\}{{</katex>}}
+
+Set of  Production rules P: <br>
+
+- {{<katex>}}WV   \rightarrow   WB  {{</katex>}}
+- {{<katex>}}WB   \rightarrow   XB  {{</katex>}}
+- {{<katex>}}AY   \rightarrow   UY   {{</katex>}}
+- {{<katex>}}UY   \rightarrow   UZ  {{</katex>}}
+- {{<katex>}}UZ   \rightarrow   UA  {{</katex>}}
+- {{<katex>}}UA   \rightarrow   YA  {{</katex>}}
+- {{<katex>}}BY   \rightarrow   ZY  {{</katex>}}
+- {{<katex>}}ZY   \rightarrow   ZU  {{</katex>}}
+- {{<katex>}}ZU   \rightarrow   ZB  {{</katex>}}
+- {{<katex>}}ZB   \rightarrow   YB  {{</katex>}}
+- {{<katex>}}aD   \rightarrow   aa   {{</katex>}}
+- {{<katex>}}bD   \rightarrow   ba   {{</katex>}}
+- {{<katex>}}aF   \rightarrow   ab   {{</katex>}}
+- {{<katex>}}bF   \rightarrow   bb   {{</katex>}}
+- {{<katex>}}aX   \rightarrow   aa   {{</katex>}}
+- {{<katex>}}bX   \rightarrow   ba   {{</katex>}}
+- {{<katex>}}aY   \rightarrow   ab   {{</katex>}}
+- {{<katex>}}bY   \rightarrow   bb   {{</katex>}}
+{{</tab>}}
+
+{{<tab "Solutions L3">}}
+
+{{</tab>}}
+
+
+{{</tabs>}}
+{{</details>}}
+
+
+
+
+{{< katex >}}A^* = \{\epsilon, a, b, aa, ab, ba, bb, aaa, aab, \ldots\}{{< /katex >}}
+
+{{<mermaid>}}
+gitGraph
+  commit
+  commit
+  branch develop
+  commit
+  commit
+  commit
+  checkout main
+  commit
+  commit
+{{</mermaid>}}
