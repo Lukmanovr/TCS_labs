@@ -9,6 +9,14 @@ Table of contents
     - [Mermaid (graphs)](#mermaid-graphs)
     - [Other shortcodes](#other-shortcodes)
   - [Familiarize yourself with our techstack](#familiarize-yourself-with-our-techstack)
+>>>>>>> master
+- [Theoretical Computer Science course at Innopolis University:](#theoretical-computer-science-course-at-innopolis-university)
+  - [How to contribute](#how-to-contribute)
+  - [Shortcodes](#shortcodes)
+    - [LaTeX](#latex)
+    - [Mermaid (graphs)](#mermaid-graphs)
+    - [Other shortcodes](#other-shortcodes)
+  - [Familiarize yourself with our techstack](#familiarize-yourself-with-our-techstack)
 
 
 ## How to contribute
