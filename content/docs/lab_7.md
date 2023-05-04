@@ -86,7 +86,7 @@ Actions
 
 ### **Moves: Graphically**
 
-![Moves Graphically](/MovesGraphicallyImage.PNG)
+![Moves Graphically](/images/lab7/MovesGraphicallyImage.PNG)
 
 - {{< katex >}}q \in Q − F{{< /katex >}} and {{< katex >}}q′ \in Q{{< /katex >}}
 
@@ -143,7 +143,7 @@ where:
 A TM {{< katex >}}T{{< /katex >}} that recognises the language {{< katex >}}A^nB^nC^n=\{a^nb^nc^n | n > 0\}{{< /katex >}}
 
 
-![Turing Machine Example](/TMExampleImage.PNG)
+![Turing Machine Example](/images/lab7/TMExampleImage.PNG)
 
 
 ------
@@ -164,25 +164,25 @@ Build TMs that recognise the following languages:
 
 <p>A TM {{< katex >}}T{{< /katex >}} that recognises the language {{< katex >}}L_1 = \{wcw | w \in \{a, b\}^+\} {{< /katex >}}</p>
 
-![Solution 1](/Solution1Image.PNG)
+![Solution 1](/images/lab7/Solution1Image.PNG)
 
 **Solution(2)**:
 
 <p>A TM {{< katex >}}T{{< /katex >}} that recognises the language {{< katex >}}L_2 = \{wcw^R | w \in \{a, b\}^+\} {{< /katex >}}, where {{< katex >}}w^R{{< /katex >}} is the reversed string {{< katex >}}w{{< /katex >}}.</p>
 
-![Solution 2](/Solution2Image.PNG)
+![Solution 2](/images/lab7/Solution2Image.PNG)
 
 **Solution(3)**:
 
 <p>A TM {{< katex >}}T{{< /katex >}} that recognises the language {{< katex >}}L_3 = \{w | w \in \{a, b\}^∗\} {{< /katex >}}, where {{< katex >}}w{{< /katex >}} is a palindrome.</p>
 
-![Solution 3](/Solution3Image.PNG)
+![Solution 3](/images/lab7/Solution3Image.PNG)
 
 
 **Solution(4)**:
 <p>A TM {{< katex >}}T{{< /katex >}} that recognises the language {{< katex >}}L_4 = \{a^nb^n | n \ge 0\} \cup \{a^nb^{2n} | n \ge 0\}{{< /katex >}}</p>
 
-![Solution 4](/Solution4Image.PNG)
+![Solution 4](/images/lab7/Solution4Image.PNG)
 
 {{< /expand >}}
 
