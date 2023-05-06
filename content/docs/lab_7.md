@@ -5,9 +5,9 @@ weight: 7
 BookToC: true
 ---
 
-# Lab Session 7
+# Lab #7
 
-## Lab #7 agenda
+## Agenda
 
 - Turing Machine  
     - Formal definition

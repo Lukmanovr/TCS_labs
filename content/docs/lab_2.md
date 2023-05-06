@@ -4,7 +4,9 @@ type: docs
 weight: 2
 BookToC: true
 ---
-## Lab #2 agenda
+# Lab #2
+
+# Agenda
 
 - Exercises on Finite State Automaton (FSA)
 

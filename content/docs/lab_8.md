@@ -4,10 +4,9 @@ type: docs
 weight: 8
 BookToC: true
 ---
-# Lab Session 8
+# Lab #8
 
-## Lab #8 agenda
-
+## Agenda
 
 - Non-deterministic FSA
 - NDFSA to (D)FSA 

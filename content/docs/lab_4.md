@@ -4,14 +4,12 @@ type: docs
 weight: 4
 BookToC: true
 ---
-# Lab Session 4
+# Lab #4
 
-## Lab #4 agenda
+## Agenda
 
 - Recap: Pumping lemma
 - Exercises  
-
-
 
 ## Pumping lemma
 

@@ -4,7 +4,7 @@ type: docs
 weight: 1
 BookToC: true
 ---
-# Lab Session 1
+# Lab #1
 
 ## Introductory notes
 
@@ -51,10 +51,7 @@ without further investigation on who produced the results and who
 actually copied.
 {{< /hint >}}
 
-
-
-## Lab #1 agenda
-
+## Agenda
 
 - Preliminaries - Sets  
 - Formal Languages  

@@ -4,11 +4,9 @@ type: docs
 weight: 9
 BookToC: true
 ---
-# Lab Session 9
+# Lab #9
 
-
-## Lab #9 agenda
-
+## Agenda
 
 - Non-determinism:  
 1) PDA
