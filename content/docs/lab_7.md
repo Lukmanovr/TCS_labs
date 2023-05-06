@@ -1,6 +1,7 @@
 ---
 title: Lab Session 7
 type: docs
+weight: 7
 BookToC: true
 ---
 

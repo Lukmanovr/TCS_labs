@@ -1,6 +1,7 @@
 ---
 title: Lab Session 2
 type: docs
+weight: 2
 BookToC: true
 ---
 ## Lab #2 agenda

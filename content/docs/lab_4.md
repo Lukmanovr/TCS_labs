@@ -1,6 +1,7 @@
 ---
 title: Lab Session 4
 type: docs
+weight: 4
 BookToC: true
 ---
 # Lab Session 4
