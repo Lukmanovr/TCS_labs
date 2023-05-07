@@ -1,4 +1,4 @@
-baseURL = 'tcs-labs.netlify.app'
+baseURL = 'https://tcs-labs.netlify.app/'
 languageCode = 'en-us'
 title = 'TCS labs IU'
 
