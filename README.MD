@@ -1,5 +1,5 @@
 # Theoretical Computer Science course at Innopolis University:
-This is a repo of [TCS course at the Innopolis University website](https://tcs-iu.netlify.app/). Feel free to contribute!
+This is a repo of [TCS course at the Innopolis University website](https://tcs-labs.netlify.app/). Feel free to contribute!
 
 Table of contents
 - [Theoretical Computer Science course at Innopolis University:](#theoretical-computer-science-course-at-innopolis-university)
@@ -20,7 +20,7 @@ If you ***do not have*** the repo on your machine:
   ```
   $ git clone --recursive https://github.com/TCS-IU/TCS_labs.git
   ```
-  *(Note) If you have already clone this repo without submodules, run this from the source directory*
+  (Note) If you have already clone this repo without submodules, run this from the source directory
   ```
   $ git submodule init && git submodule update
   ```
