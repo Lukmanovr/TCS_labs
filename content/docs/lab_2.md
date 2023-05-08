@@ -4,9 +4,9 @@ type: docs
 weight: 2
 BookToC: true
 ---
-# Lab #2
+# **Lab Session #2**
 
-# Agenda
+# **Agenda**
 
 - Exercises on Finite State Automaton (FSA)
 
@@ -19,7 +19,7 @@ Finite state automata generate regular languages. Finite state machines
 can be used to model problems in many fields including mathematics, 
 artificial intelligence, games, and linguistics.
 
-![placeholdertext](/1.png)
+![placeholdertext](/images/lab2/1.png)
 
 #### **Formal Definition**  
 
