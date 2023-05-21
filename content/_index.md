@@ -4,8 +4,15 @@ type: docs
 toc: false
 ---
 
-# TCS course at the Innopolis University
+# **TCS course at the Innopolis University**
 **Welcome to the Theoretical Computer Science Lab sessions website!**
+
+
+{{< hint info >}}
+**Disclaimer**  
+We are always looking for ways to improve the Theoretical Computer Science Lab sessions website and make it a valuable resource for our students. That's why we welcome and encourage your participation in making the website better.  
+{{< /hint >}}
+
 {{< columns >}}
 Here, you will find all the resources and information you need to successfully complete the lab sessions. The lab sessions are designed to provide hands-on experience with the concepts and techniques covered in the theoretical computer science course. You will have the opportunity to work on challenging problems, conduct experiments, and implement algorithms.
 
@@ -18,10 +25,6 @@ We encourage you to actively participate in the lab sessions and make the most o
 We look forward to working with you and exploring the exciting world of theoretical computer science.  
 {{< /columns >}}  
 
-{{< hint info >}}
-**Disclaimer**  
-We are always looking for ways to improve the Theoretical Computer Science Lab sessions website and make it a valuable resource for our students. That's why we welcome and encourage your participation in making the website better.  
-{{< /hint >}}
 There are a few ways you can get involved:
 - You can provide feedback on the website's content and organization.
 - You can suggest new features or resources that you think would be helpful.

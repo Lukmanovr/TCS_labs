@@ -8,11 +8,25 @@ BookToC: true
 # **Lab Session #3**
 ## **Agenda**
 
+- Finite State Transducers
 - Exercises on Finite State Transducer
 
 ---
 
 ## **Finite State Transducer**
+
+A finite-state transducer (FST) is a finite-state machine with two memory tapes, following the terminology for Turing machines: an input tape and an output tape. This contrasts with an ordinary finite-state automaton, which has a single tape. An FST is a type of finite-state automaton (FSA) that maps between two sets of symbols. An FST is more general than an FSA.
+
+An FSA defines a formal language by defining a set of accepted strings, while an FST defines relations between sets of strings. An FST will read a set of strings on the input tape and generates a set of relations on the output tape. An FST can be thought of as a translator or relater between strings in a set. In morphological parsing, an example would be inputting a string of letters into the FST, the FST would then output a string of morphemes.
+
+FSTs are used in a variety of applications, including:
+
+Natural language processing: FSTs are used in natural language processing for tasks such as morphological analysis, part-of-speech tagging, and named entity recognition.
+Speech recognition: FSTs are used in speech recognition for tasks such as acoustic modeling and decoding.
+Machine translation: FSTs are used in machine translation for tasks such as lexical translation and grammar conversion.
+Compilers: FSTs are used in compilers for tasks such as lexical analysis and syntax analysis.
+FSTs are a powerful tool for modeling and manipulating strings. They are used in a variety of applications, including natural language processing, speech recognition, machine translation, and compilers.
+
 
 ### **Finite State Transducer formula**
 
