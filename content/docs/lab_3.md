@@ -5,9 +5,7 @@ weight: 3
 BookToC: true
 # markup: 'mmark'
 ---
-
 # **Lab Session #3**
-
 ## **Agenda**
 
 - Exercises on Finite State Transducer
@@ -20,23 +18,20 @@ BookToC: true
 
 A finite A Finite State Transducer (FST) is a tuple {{< katex >}} \lang Q, I , \delta, q_0, F , O, \eta \rang {{< /katex >}} \
 where:
-
 - {{<katex>}} Q, I , \delta, q_0, F: {{</katex>}} just like acceptors
 - {{<katex>}} O {{</katex>}} is the output alphabet
-- {{<katex>}} \eta : Q \times I \rarr O^\* {{</katex>}}
-
+- {{<katex>}} \eta : Q \times I \rarr O^* {{</katex>}}
+  
 **Remark**
-
 - the condition for acceptance remains the same as in acceptors
 - the translation is performed only on accepted strings
 
 ---
 
 ### **Example**
-
 Build a complete FST accepting the following language
-over the alphabet {{< katex >}} A = \{0,1 \}{{< /katex >}}. <br>
-{{<katex display>}} L = \{ x \isin A^\* | \textit { the number of } 0's \textit{ is even} \} {{</katex>}}
+ over the alphabet {{< katex >}} A = \{0,1 \}{{< /katex >}}. <br>
+    {{<katex display>}} L = \{ x \isin A^* |  \textit { the number of }  0's \textit{ is even}  \} {{</katex>}} 
 
 The FST outputs the string obtained by removing every odd occurrence of 0 and doubling every occurrence of 1. Examples of inputs recognised by L and their respective outputs:
 
@@ -44,51 +39,50 @@ The FST outputs the string obtained by removing every odd occurrence of 0 and do
 - Input: {{<katex>}}00{{</katex>}}, Output:{{<katex>}}0{{</katex>}}
 - Input: {{<katex>}}000100011{{</katex>}}, Output: {{<katex>}}011001111{{</katex>}}
 
-{{<katex display>}} L = \{ x \isin A^\* | \textit { the number of } 0's \textit{ is even} \} {{</katex>}}
+{{<katex display>}} L = \{ x \isin A^* |  \textit { the number of }  0's \textit{ is even}  \} {{</katex>}} 
 
-{{< accordion title="Solution:" >}}
-![The number of 0's is even](/static/images/lab3/1.png)
-{{< /accordion >}}
+{{< expand Solution >}}
+
+![placeholdertext](/images/lab3/1.png)
+
+{{< /expand >}}
 
 ---
 
 ### **Exercises**
 
 Build complete FSAs over the languages given below:
-
 1. {{<katex>}} A = \{w,t,a,l,k,e,d\} {{</katex>}}that accepts only the verb ”walked” or ”talked”. The FST will translate the input verb to present form ex: walked to walk.
-   {{< accordion title="Solution 1 :" >}}
-   ![Solution 1](/static/images/lab3/2.png)
-   {{< /accordion >}}
+{{< expand Solution >}}
+![Solution 1](/images/lab3/2.png)
+{{< /expand >}}
 1. {{<katex>}}A = \{a, b\} {{</katex>}}that accepts only strings ending with the letter b. The FST will translate the input string where every second symbol a in the input is erased.
-   {{< accordion title="Solution 2 :" >}}
-   ![Solution 2](/static/images/lab3/3.png)
-   {{< /accordion >}}
+{{< expand Solution >}}
+![Solution 2](/images/lab3/3.png)
+{{< /expand >}}
 1. {{<katex>}}A = \{0, 1\} {{</katex>}} that accepts strings that are binary representation of integers divisible by 2. The FST will translate the input string into result of division by 2.
-   {{< accordion title="Solution 3 :" >}}
-   ![Solution 3](/static/images/lab3/4.png)
-   {{< /accordion >}}
+{{< expand Solution >}}
+![Solution 3](/images/lab3/4.png)
+{{< /expand >}}
 1. {{<katex>}}A = \{0, 1\} {{</katex>}}that accepts strings that are binary representation of integers divisible by 3. The FST will translate the input string into result of division by 3.
-   {{< accordion title="Solution 4 :" >}}
-   ![Solution 4](/static/images/lab3/5.png)
-   {{< /accordion >}}
+{{< expand Solution >}}
+![Solution 4](/images/lab3/5.png)
+{{< /expand >}}
 
 ---
 
 ## **Operations on FSA**
 
 ### **Intersection**
-
 ---
-
 #### **Intersection Formula**
 
-Suppose {{< katex >}} M_1 = \lparen Q_1, A, \delta_1, q^1_0, F_1 \rparen {{</katex>}} and {{<katex>}} M_2 = \lparen Q_2, A, \delta_2, q^2_0, F_2 \rparen{{</katex>}} are finite state automata accepting {{<katex>}} L_1 {{</katex>}} and {{<katex>}}L_2
+Suppose {{< katex >}} M_1 = \lparen Q_1, A, \delta_1, q^1_0, F_1 \rparen {{</katex>}} and {{<katex>}} M_2 = \lparen Q_2, A, \delta_2, q^2_0, F_2 \rparen{{</katex>}} are finite state automata accepting {{<katex>}} L_1 {{</katex>}} and {{<katex>}}L_2 
 {{</katex>}}, respectively. Let{{<katex>}} M {{</katex>}} be the complete {{<katex>}} \text {FSA M} = \lparen Q,A,\delta,q_0,F \rparen {{</katex>}}, \
 where:
 
 {{<katex display>}} Q = Q_1 \times Q_2 {{</katex>}}
-{{<katex display>}} q_0 = \lparen q^1_0, q^2_0 \rparen
+{{<katex display>}} q_0 = \lparen q^1_0, q^2_0 \rparen 
 {{</katex>}}
 the transition function {{<katex>}} \delta{{</katex>}} is defined by the formula
 {{<katex display>}} \delta \lparen \lparen q, p \rparen, a \rparen = \lparen \delta_1 \lparen q, a \rparen , \delta_2 \lparen p, a \rparen \rparen {{</katex>}}
@@ -96,16 +90,19 @@ for every {{<katex>}} q \isin Q_1 {{</katex>}}, every {{<katex>}} p \isin Q_2 {{
 {{<katex display>}} F= \lbrace \lparen q,p \rparen | q \isin F_1 \land p \isin F_2 \rbrace {{</katex>}}
 {{<katex>}} M {{</katex>}} accepts the language {{<katex>}} L_1 \cap L_2 {{</katex>}}.
 
+---
+
 #### **Intersection Example**
 
 Let {{<katex>}} M_1{{</katex>}} be a complete {{<katex>}}\text{FSA}{{</katex>}} defined as
 
 {{<katex display>}} M_1 = \lang \lbrace q_0, q_1 \rbrace, \lbrace a \rbrace, \lbrace \lparen \lparen q_0,a \rparen, q_1 \rparen, \lparen \lparen q_1,a \rparen, q_0 \rparen \rbrace, q_0, \lbrace q_1 \rbrace \rang{{</katex>}}
 
-- {{<katex>}} \lbrace q_0, q_1 \rbrace \rarr{{</katex>}} set of states;
+- {{<katex>}} \lbrace q_0, q_1 \rbrace \rarr{{</katex>}} set of states; 
+  
 - {{<katex>}} \lbrace a \rbrace \rarr {{</katex>}} input alphabet;
 - {{<katex>}} \lbrace \lparen \lparen q_0,a \rparen, q_1 \rparen, \lparen q_1,a \rparen, q_0 \rparen \rbrace \rarr {{</katex>}} partial transition function;
-- {{<katex>}} q_0 \rarr {{</katex>}} initial state;
+- {{<katex>}}  q_0 \rarr {{</katex>}} initial state;
 - {{<katex>}} \lbrace q_1 \rbrace \rarr {{</katex>}} set of final states;
 
 Let {{<katex>}} M_2{{</katex>}} be a complete {{<katex>}}\text{FSA}{{</katex>}} defined as
@@ -117,20 +114,21 @@ Then :
 {{<katex display>}} \lparen M_1 \cap M_2 \rparen = \lang \lbrace \lparen q_0, p_0 \rparen , \lparen q_1, p_0 \rparen \rbrace, \lbrace a \rbrace, \lbrace \lparen \lparen \lparen q_0, p_0 \rparen, a \rparen , \lparen q_1, p_0 \rparen \rparen , {{</katex>}}
 {{<katex display>}}\lparen \lparen \lparen q_1, p_0 \rparen ,a \rparen , \lparen q_0,p_0 \rparen \rparen \rbrace , \lparen q_0, p_0 \rparen ,\lbrace \lparen q_1, p_0 \rparen \rbrace \rang .{{</katex>}}
 
-#### **Intersection Graph**
+---
 
-![Intersection Graph](/static/images/lab3/6.png)
+#### **Intersection Graph**
+![Intersection Graph](/images/lab3/6.png)
 
 ---
 
 ### **Union**
 
-Suppose {{< katex >}} M_1 = \lparen Q_1, A, \delta_1, q^1_0, F_1 \rparen {{</katex>}} and {{<katex>}} M_2 = \lparen Q_2, A, \delta_2, q^2_0, F_2 \rparen{{</katex>}} are finite state automata accepting {{<katex>}} L_1 {{</katex>}} and {{<katex>}}L_2
+Suppose {{< katex >}} M_1 = \lparen Q_1, A, \delta_1, q^1_0, F_1 \rparen {{</katex>}} and {{<katex>}} M_2 = \lparen Q_2, A, \delta_2, q^2_0, F_2 \rparen{{</katex>}} are finite state automata accepting {{<katex>}} L_1 {{</katex>}} and {{<katex>}}L_2 
 {{</katex>}}, respectively. Let{{<katex>}} M {{</katex>}} be the complete {{<katex>}} \text {FSA M} = \lparen Q,A,\delta,q_0,F \rparen {{</katex>}},  
 where:
 
 {{<katex display>}} Q = Q_1 \times Q_2 {{</katex>}}
-{{<katex display>}} q_0 = \lparen q^1_0, q^2_0 \rparen
+{{<katex display>}} q_0 = \lparen q^1_0, q^2_0 \rparen 
 {{</katex>}}
 the transition function {{<katex>}} \delta{{</katex>}} is defined by the formula
 {{<katex display>}} \delta \lparen \lparen q, p \rparen, a \rparen = \lparen \delta_1 \lparen q, a \rparen , \delta_2 \lparen p, a \rparen \rparen {{</katex>}}
@@ -142,12 +140,12 @@ for every {{<katex>}} q \isin Q_1 {{</katex>}}, every {{<katex>}} p \isin Q_2 {{
 
 ### **Difference**
 
-Suppose {{< katex >}} M_1 = \lparen Q_1, A, \delta_1, q^1_0, F_1 \rparen {{</katex>}} and {{<katex>}} M_2 = \lparen Q_2, A, \delta_2, q^2_0, F_2 \rparen{{</katex>}} are finite state automata accepting {{<katex>}} L_1 {{</katex>}} and {{<katex>}}L_2
+Suppose {{< katex >}} M_1 = \lparen Q_1, A, \delta_1, q^1_0, F_1 \rparen {{</katex>}} and {{<katex>}} M_2 = \lparen Q_2, A, \delta_2, q^2_0, F_2 \rparen{{</katex>}} are finite state automata accepting {{<katex>}} L_1 {{</katex>}} and {{<katex>}}L_2 
 {{</katex>}}, respectively. Let{{<katex>}} M {{</katex>}} be the complete {{<katex>}} \text {FSA M} = \lparen Q,A,\delta,q_0,F \rparen {{</katex>}},  
 where:
 
 {{<katex display>}} Q = Q_1 \times Q_2 {{</katex>}}
-{{<katex display>}} q_0 = \lparen q^1_0, q^2_0 \rparen
+{{<katex display>}} q_0 = \lparen q^1_0, q^2_0 \rparen 
 {{</katex>}}
 the transition function {{<katex>}} \delta{{</katex>}} is defined by the formula
 {{<katex display>}} \delta \lparen \lparen q, p \rparen, a \rparen = \lparen \delta_1 \lparen q, a \rparen , \delta_2 \lparen p, a \rparen \rparen {{</katex>}}
@@ -169,12 +167,12 @@ Suppose {{<katex>}} M = \lparen Q, A, \delta, q_0, F \rparen {{</katex>}} is a c
 
 ### **Summary of Operations on FSA**
 
-Suppose {{< katex >}} M_1 = \lparen Q_1, A, \delta_1, q^1_0, F_1 \rparen {{</katex>}} and {{<katex>}} M_2 = \lparen Q_2, A, \delta_2, q^2_0, F_2 \rparen{{</katex>}} are finite state automata accepting {{<katex>}} L_1 {{</katex>}} and {{<katex>}}L_2
+Suppose {{< katex >}} M_1 = \lparen Q_1, A, \delta_1, q^1_0, F_1 \rparen {{</katex>}} and {{<katex>}} M_2 = \lparen Q_2, A, \delta_2, q^2_0, F_2 \rparen{{</katex>}} are finite state automata accepting {{<katex>}} L_1 {{</katex>}} and {{<katex>}}L_2 
 {{</katex>}}, respectively. Let{{<katex>}} M {{</katex>}} be the complete {{<katex>}} \text {FSA M} = \lparen Q,A,\delta,q_0,F \rparen {{</katex>}},  
 where:
 
 {{<katex display>}} Q = Q_1 \times Q_2 {{</katex>}}
-{{<katex display>}} q_0 = \lparen q^1_0, q^2_0 \rparen
+{{<katex display>}} q_0 = \lparen q^1_0, q^2_0 \rparen 
 {{</katex>}}
 {{<katex display>}} \delta \lparen \lparen q, p \rparen, a \rparen = \lparen \delta_1 \lparen q, a \rparen , \delta_2 \lparen p, a \rparen \rparen {{</katex>}}
 
@@ -191,7 +189,7 @@ The set of final states will be defined as
 {{</tab>}}
 {{<tab "The Final State Of Intersection">}}
 
-{{<katex>}} L_1 \cap L_2 : F= \lbrace \lparen q,p \rparen | q \isin F_1 \land p \isin F_2 \rbrace {{</katex>}}.
+{{<katex>}} L_1 \cap L_2 :  F= \lbrace \lparen q,p \rparen | q \isin F_1 \land p \isin F_2 \rbrace {{</katex>}}.
 {{</tab>}}
 {{</tabs>}}
 
@@ -202,37 +200,37 @@ The set of final states will be defined as
 ### **Part 1**
 
 Let {{<katex>}} A = \lbrace 0, 1 \rbrace {{</katex>}} be the alphabet.
-
 1. Build a complete {{<katex>}} \text { FSA } M_1 {{</katex>}} that recognises the language:
-   {{<katex display>}} L_1= \lbrace x \isin A^\* | x \text { has an even number of } 1's \rbrace {{</katex>}}
-   {{< accordion title="Solution 1 :" >}}
-   ![Solution 1](/static/images/lab3/7.png)
-   {{< /accordion >}}
+{{<katex display>}} L_1= \lbrace x \isin A^* | x  \text { has an even number of  }  1's \rbrace {{</katex>}}
+{{< expand Solution >}}
+![Solution 1](/images/lab3/7.png)
+{{< /expand >}}
 
 2. Build a complete {{<katex>}} \text { FSA } M_2 {{</katex>}} that recognises the language:
-   {{<katex display>}} L_2= \lbrace x \isin A^\* | x \text { has an odd number of } 0's \rbrace {{</katex>}}
-   {{< accordion title="Solution 2 :" >}}
-   ![Solution 2](/static/images/lab3/8.png)
-   {{< /accordion >}}
+{{<katex display>}} L_2= \lbrace x \isin A^* | x  \text { has an odd number of  }  0's \rbrace {{</katex>}}
+{{< expand Solution >}}
+![Solution 2](/images/lab3/8.png)
+{{< /expand >}}
 
 3. Build a complete {{<katex>}} \text { FSA } {{</katex>}} that accepts when either {{<katex>}} M_1 {{</katex>}} or {{<katex>}} M_2 {{</katex>}} accepts.
-   {{< accordion title="Solution 3 :" >}}
-   ![Solution 3](/static/images/lab3/9.png)
-   {{< /accordion >}}
+{{< expand Solution >}}
+![Solution 3](/images/lab3/9.png)
+{{< /expand >}}
+   
 4. Build a complete {{<katex>}} \text { FSA } {{</katex>}} that accepts when both {{<katex>}} M_1 {{</katex>}} and {{<katex>}} M_2 {{</katex>}} accept.
-   {{< accordion title="Solution 4 :" >}}
-   ![Solution 4](/static/images/lab3/10.png)
-   {{< /accordion >}}
+{{< expand Solution >}}
+![Solution 4](/images/lab3/10.png)
+{{< /expand >}}
 
-5. Build a complete {{<katex>}} \text { FSA } {{</katex>}} that accepts when {{<katex>}} M_1 {{</katex>}} accepts and {{<katex>}} M_2 {{</katex>}} rejects.
-   {{< accordion title="Solution 5:" >}}
-   ![Solution 5](/static/images/lab3/11.png)
-   {{< /accordion >}}
+5. Build a complete {{<katex>}} \text { FSA } {{</katex>}} that accepts when {{<katex>}} M_1 {{</katex>}} accepts and  {{<katex>}} M_2 {{</katex>}} rejects.
+{{< expand Solution >}}
+![Solution 5](/images/lab3/11.png)
+{{< /expand >}}
 
-6. Build a complement for {{<katex>}} M_1 {{</katex>}}.
-   {{< accordion title="Solution 6 :" >}}
-   ![Solution 6](/static/images/lab3/12.png)
-   {{< /accordion >}}
+1. Build a complement for {{<katex>}} M_1 {{</katex>}}.
+{{< expand Solution >}}
+![Solution 6](/images/lab3/12.png)
+{{< /expand >}}
 
 ---
 
@@ -240,17 +238,17 @@ Let {{<katex>}} A = \lbrace 0, 1 \rbrace {{</katex>}} be the alphabet.
 
 Construct a complement for the following {{<katex>}} \text {FSA} {{</katex>}}
 
-![placeholdertext](/static/images/lab3/13.png)
+![placeholdertext](/images/lab3/13.png)
 
-{{< accordion title="Solution :" >}}
-First, we have to complete the {{<katex>}} \text {FSA} {{</katex>}}
+{{< expand Solution >}}
+First, we have to complete the FSA
 
-![Solution](/static/images/lab3/14.png)
+![Solution](/images/lab3/14.png)
 
 The complement:
 
-![Solution](/static/images/lab3/15.png)
-{{< /accordion >}}
+![Solution](/images/lab3/15.png) 
+{{< /expand >}}
 
 ---
 
@@ -259,42 +257,42 @@ The complement:
 Let {{<katex>}} A = \lbrace 0, 1 \rbrace {{</katex>}} be the alphabet.
 
 1. Build a complete {{<katex>}} \text { FSA } M_a {{</katex>}} that recognises the language:
-   {{<katex display>}} L_a= \lbrace x \isin A^\* | x \text { is the binary representation of an integer, and it is divisible by } 2 \rbrace {{</katex>}}
-   {{< accordion title="Solution 1 :" >}}
-   Graphical Representation - State Transition Diagram
+{{<katex display>}} L_a= \lbrace x \isin A^* | x  \text { is the binary representation of an integer, and it is divisible by  }  2 \rbrace {{</katex>}}
+{{< expand Solution >}}
+Graphical Representation - State Transition Diagram
 
-![Solution 1](/static/images/lab3/16.png)
+![Solution 1](/images/lab3/16.png)
 
 Graphical Representation — State Transition Table
 
-![Solution 1](/static/images/lab3/17.png)
+![Solution 1](/images/lab3/17.png)
 
-{{< /accordion >}}
+{{< /expand >}}
 
 2. Build a complete {{<katex>}} \text { FSA } M_b {{</katex>}} that recognises the language:
-   {{<katex display>}} L_b= \lbrace x \isin A^\* | x \text { is the binary representation of an integer, and it is divisible by } 3 \rbrace {{</katex>}}
-   {{< accordion title="Solution 2 :" >}}
-   Graphical Representation - State Transition Diagram
+{{<katex display>}} L_b= \lbrace x \isin A^* | x  \text { is the binary representation of an integer, and it is divisible by  }  3 \rbrace {{</katex>}}
+{{< expand Solution >}}
+Graphical Representation - State Transition Diagram
 
-![Solution 2](/static/images/lab3/18.png) \
+![Solution 2](/images/lab3/18.png) \
 
 Graphical Representation — State Transition Table
 
-![Solution 2](/static/images/lab3/19.png)
+![Solution 2](/images/lab3/19.png)
 
-{{< /accordion >}}
+{{< /expand >}}
 
 3. Build a complete {{<katex>}} \text { FSA } {{</katex>}} that accepts when both {{<katex>}} M_a {{</katex>}} and {{<katex>}} M_b {{</katex>}} accept.
-   {{< accordion title="Solution 3 :" >}}
-   ![Solution 3](/static/images/lab3/20.png)
-   {{< /accordion >}}
+{{< expand Solution >}}
+![Solution 3](/images/lab3/20.png)
+{{< /expand >}}
 
-4. Build a complete {{<katex>}} \text { FSA } {{</katex>}} that accepts when either {{<katex>}} M_a {{</katex>}} or {{<katex>}} M_b {{</katex>}} accepts.
-   {{< accordion title="Solution 4 :" >}}
-   ![Solution 4](/static/images/lab3/21.png)
-   {{< /accordion >}}
+1. Build a complete {{<katex>}} \text { FSA } {{</katex>}} that accepts when either {{<katex>}} M_a {{</katex>}} or {{<katex>}} M_b {{</katex>}} accepts.
+{{< expand Solution >}}
+![Solution 4](/images/lab3/21.png)
+{{< /expand >}}
 
-5. Build a complete {{<katex>}} \text { FSA } {{</katex>}} that accepts when {{<katex>}} M_a {{</katex>}} accepts and {{<katex>}} M_b {{</katex>}} rejects.
-   {{< accordion title="Solution 5 :" >}}
-   ![Solution 5](/static/images/lab3/22.png)
-   {{< /accordion >}}
+1. Build a complete {{<katex>}} \text { FSA } {{</katex>}} that accepts when {{<katex>}} M_a {{</katex>}} accepts and {{<katex>}} M_b {{</katex>}} rejects.
+{{< expand Solution >}}
+![Solution 5](/images/lab3/22.png)
+{{< /expand >}}
