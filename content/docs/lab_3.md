@@ -204,7 +204,7 @@ Let {{<katex>}} A = \lbrace 0, 1 \rbrace {{</katex>}} be the alphabet.
 {{<katex display>}} L_1= \lbrace x \isin A^* | x  \text { has an even number of  }  1's \rbrace {{</katex>}}
 {{< expand Solution >}}
 ![Solution 1](/images/lab3/7.png)
-{{< /expand >}}
+{{< /expand >}} 
 
 2. Build a complete {{<katex>}} \text { FSA } M_2 {{</katex>}} that recognises the language:
 {{<katex display>}} L_2= \lbrace x \isin A^* | x  \text { has an odd number of  }  0's \rbrace {{</katex>}}
