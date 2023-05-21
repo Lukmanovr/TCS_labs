@@ -41,9 +41,11 @@ The FST outputs the string obtained by removing every odd occurrence of 0 and do
 
 {{<katex display>}} L = \{ x \isin A^* |  \textit { the number of }  0's \textit{ is even}  \} {{</katex>}} 
 
-{{< accordion title="Solution:" >}}
-![The number of 0's is even](/static/images/lab3/1.png)
-{{< /accordion >}}
+{{< expand Solution >}}
+
+![placeholdertext](/images/lab3/1.png)
+
+{{< /expand >}}
 
 ---
 
@@ -51,21 +53,21 @@ The FST outputs the string obtained by removing every odd occurrence of 0 and do
 
 Build complete FSAs over the languages given below:
 1. {{<katex>}} A = \{w,t,a,l,k,e,d\} {{</katex>}}that accepts only the verb ”walked” or ”talked”. The FST will translate the input verb to present form ex: walked to walk.
-{{< accordion title="Solution 1 :" >}}
-![Solution 1](/static/images/lab3/2.png)
-{{< /accordion >}}
+{{< expand Solution >}}
+![Solution 1](/images/lab3/2.png)
+{{< /expand >}}
 1. {{<katex>}}A = \{a, b\} {{</katex>}}that accepts only strings ending with the letter b. The FST will translate the input string where every second symbol a in the input is erased.
-{{< accordion title="Solution 2 :" >}}
-![Solution 2](/static/images/lab3/3.png)
-{{< /accordion >}}
+{{< expand Solution >}}
+![Solution 2](/images/lab3/3.png)
+{{< /expand >}}
 1. {{<katex>}}A = \{0, 1\} {{</katex>}} that accepts strings that are binary representation of integers divisible by 2. The FST will translate the input string into result of division by 2.
-{{< accordion title="Solution 3 :" >}}
-![Solution 3](/static/images/lab3/4.png)
-{{< /accordion >}}
+{{< expand Solution >}}
+![Solution 3](/images/lab3/4.png)
+{{< /expand >}}
 1. {{<katex>}}A = \{0, 1\} {{</katex>}}that accepts strings that are binary representation of integers divisible by 3. The FST will translate the input string into result of division by 3.
-{{< accordion title="Solution 4 :" >}}
-![Solution 4](/static/images/lab3/5.png)
-{{< /accordion >}}
+{{< expand Solution >}}
+![Solution 4](/images/lab3/5.png)
+{{< /expand >}}
 
 ---
 
@@ -88,6 +90,7 @@ for every {{<katex>}} q \isin Q_1 {{</katex>}}, every {{<katex>}} p \isin Q_2 {{
 {{<katex display>}} F= \lbrace \lparen q,p \rparen | q \isin F_1 \land p \isin F_2 \rbrace {{</katex>}}
 {{<katex>}} M {{</katex>}} accepts the language {{<katex>}} L_1 \cap L_2 {{</katex>}}.
 
+---
 
 #### **Intersection Example**
 
@@ -111,8 +114,10 @@ Then :
 {{<katex display>}} \lparen M_1 \cap M_2 \rparen = \lang \lbrace \lparen q_0, p_0 \rparen , \lparen q_1, p_0 \rparen \rbrace, \lbrace a \rbrace, \lbrace \lparen \lparen \lparen q_0, p_0 \rparen, a \rparen , \lparen q_1, p_0 \rparen \rparen , {{</katex>}}
 {{<katex display>}}\lparen \lparen \lparen q_1, p_0 \rparen ,a \rparen , \lparen q_0,p_0 \rparen \rparen \rbrace , \lparen q_0, p_0 \rparen ,\lbrace \lparen q_1, p_0 \rparen \rbrace \rang .{{</katex>}}
 
+---
+
 #### **Intersection Graph**
-![Intersection Graph](/static/images/lab3/6.png)
+![Intersection Graph](/images/lab3/6.png)
 
 ---
 
@@ -197,35 +202,35 @@ The set of final states will be defined as
 Let {{<katex>}} A = \lbrace 0, 1 \rbrace {{</katex>}} be the alphabet.
 1. Build a complete {{<katex>}} \text { FSA } M_1 {{</katex>}} that recognises the language:
 {{<katex display>}} L_1= \lbrace x \isin A^* | x  \text { has an even number of  }  1's \rbrace {{</katex>}}
-{{< accordion title="Solution 1 :" >}}
-![Solution 1](/static/images/lab3/7.png)
-{{< /accordion >}}
+{{< expand Solution >}}
+![Solution 1](/images/lab3/7.png)
+{{< /expand >}}
 
 2. Build a complete {{<katex>}} \text { FSA } M_2 {{</katex>}} that recognises the language:
 {{<katex display>}} L_2= \lbrace x \isin A^* | x  \text { has an odd number of  }  0's \rbrace {{</katex>}}
-{{< accordion title="Solution 2 :" >}}
-![Solution 2](/static/images/lab3/8.png)
-{{< /accordion >}}
+{{< expand Solution >}}
+![Solution 2](/images/lab3/8.png)
+{{< /expand >}}
 
 3. Build a complete {{<katex>}} \text { FSA } {{</katex>}} that accepts when either {{<katex>}} M_1 {{</katex>}} or {{<katex>}} M_2 {{</katex>}} accepts.
-{{< accordion title="Solution 3 :" >}}
-![Solution 3](/static/images/lab3/9.png)
-{{< /accordion >}}
+{{< expand Solution >}}
+![Solution 3](/images/lab3/9.png)
+{{< /expand >}}
    
 4. Build a complete {{<katex>}} \text { FSA } {{</katex>}} that accepts when both {{<katex>}} M_1 {{</katex>}} and {{<katex>}} M_2 {{</katex>}} accept.
-{{< accordion title="Solution 4 :" >}}
-![Solution 4](/static/images/lab3/10.png)
-{{< /accordion >}}
+{{< expand Solution >}}
+![Solution 4](/images/lab3/10.png)
+{{< /expand >}}
 
 5. Build a complete {{<katex>}} \text { FSA } {{</katex>}} that accepts when {{<katex>}} M_1 {{</katex>}} accepts and  {{<katex>}} M_2 {{</katex>}} rejects.
-{{< accordion title="Solution 5:" >}}
-![Solution 5](/static/images/lab3/11.png)
-{{< /accordion >}}
+{{< expand Solution >}}
+![Solution 5](/images/lab3/11.png)
+{{< /expand >}}
 
-6. Build a complement for {{<katex>}} M_1 {{</katex>}}.
-{{< accordion title="Solution 6 :" >}}
-![Solution 6](/static/images/lab3/12.png)
-{{< /accordion >}}
+1. Build a complement for {{<katex>}} M_1 {{</katex>}}.
+{{< expand Solution >}}
+![Solution 6](/images/lab3/12.png)
+{{< /expand >}}
 
 ---
 
@@ -233,17 +238,17 @@ Let {{<katex>}} A = \lbrace 0, 1 \rbrace {{</katex>}} be the alphabet.
 
 Construct a complement for the following {{<katex>}} \text {FSA} {{</katex>}}
 
-![placeholdertext](/static/images/lab3/13.png)
+![placeholdertext](/images/lab3/13.png)
 
-{{< accordion title="Solution :" >}}
-First, we have to complete the {{<katex>}} \text {FSA} {{</katex>}}
+{{< expand Solution >}}
+First, we have to complete the FSA
 
-![Solution](/static/images/lab3/14.png)
+![Solution](/images/lab3/14.png)
 
 The complement:
 
-![Solution](/static/images/lab3/15.png) 
-{{< /accordion >}}
+![Solution](/images/lab3/15.png) 
+{{< /expand >}}
 
 ---
 
@@ -253,41 +258,41 @@ Let {{<katex>}} A = \lbrace 0, 1 \rbrace {{</katex>}} be the alphabet.
 
 1. Build a complete {{<katex>}} \text { FSA } M_a {{</katex>}} that recognises the language:
 {{<katex display>}} L_a= \lbrace x \isin A^* | x  \text { is the binary representation of an integer, and it is divisible by  }  2 \rbrace {{</katex>}}
-{{< accordion title="Solution 1 :" >}}
+{{< expand Solution >}}
 Graphical Representation - State Transition Diagram
 
-![Solution 1](/static/images/lab3/16.png)
+![Solution 1](/images/lab3/16.png)
 
 Graphical Representation — State Transition Table
 
-![Solution 1](/static/images/lab3/17.png)
+![Solution 1](/images/lab3/17.png)
 
-{{< /accordion >}}
+{{< /expand >}}
 
 2. Build a complete {{<katex>}} \text { FSA } M_b {{</katex>}} that recognises the language:
 {{<katex display>}} L_b= \lbrace x \isin A^* | x  \text { is the binary representation of an integer, and it is divisible by  }  3 \rbrace {{</katex>}}
-{{< accordion title="Solution 2 :" >}}
+{{< expand Solution >}}
 Graphical Representation - State Transition Diagram
 
-![Solution 2](/static/images/lab3/18.png) \
+![Solution 2](/images/lab3/18.png) \
 
 Graphical Representation — State Transition Table
 
-![Solution 2](/static/images/lab3/19.png)
+![Solution 2](/images/lab3/19.png)
 
-{{< /accordion >}}
+{{< /expand >}}
 
 3. Build a complete {{<katex>}} \text { FSA } {{</katex>}} that accepts when both {{<katex>}} M_a {{</katex>}} and {{<katex>}} M_b {{</katex>}} accept.
-{{< accordion title="Solution 3 :" >}}
-![Solution 3](/static/images/lab3/20.png)
-{{< /accordion >}}
+{{< expand Solution >}}
+![Solution 3](/images/lab3/20.png)
+{{< /expand >}}
 
-4. Build a complete {{<katex>}} \text { FSA } {{</katex>}} that accepts when either {{<katex>}} M_a {{</katex>}} or {{<katex>}} M_b {{</katex>}} accepts.
-{{< accordion title="Solution 4 :" >}}
-![Solution 4](/static/images/lab3/21.png)
-{{< /accordion >}}
+1. Build a complete {{<katex>}} \text { FSA } {{</katex>}} that accepts when either {{<katex>}} M_a {{</katex>}} or {{<katex>}} M_b {{</katex>}} accepts.
+{{< expand Solution >}}
+![Solution 4](/images/lab3/21.png)
+{{< /expand >}}
 
 1. Build a complete {{<katex>}} \text { FSA } {{</katex>}} that accepts when {{<katex>}} M_a {{</katex>}} accepts and {{<katex>}} M_b {{</katex>}} rejects.
-{{< accordion title="Solution 5 :" >}}
-![Solution 5](/static/images/lab3/22.png)
-{{< /accordion >}}
+{{< expand Solution >}}
+![Solution 5](/images/lab3/22.png)
+{{< /expand >}}
