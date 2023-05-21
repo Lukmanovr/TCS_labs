@@ -30,12 +30,17 @@ FSTs are a powerful tool for modeling and manipulating strings. They are used in
 
 ### **Finite State Transducer formula**
 
-A finite A Finite State Transducer (FST) is a tuple {{< katex >}} \lang Q, I , \delta, q_0, F , O, \eta \rang {{< /katex >}} \
-where:
-- {{<katex>}} Q, I , \delta, q_0, F: {{</katex>}} just like acceptors
-- {{<katex>}} O {{</katex>}} is the output alphabet
-- {{<katex>}} \eta : Q \times I \rarr O^* {{</katex>}}
-  
+A finite state transducer (FST) is a tuple {{< katex >}} \langle {{< /katex >}} {{< katex >}}Q{{</katex>}}, {{< katex >}}I{{</katex>}}, {{< katex >}}\delta{{</katex>}}, {{< katex >}}q_0{{</katex>}}, {{< katex >}}F{{</katex>}}, {{< katex >}}O{{</katex>}}, {{< katex >}}\eta{{</katex>}} {{< katex >}}\rangle{{< /katex >}}, where:
+
+- {{< katex >}}Q{{</katex>}} is a finite set of states. Each state represents a possible configuration of the FST.
+- {{< katex >}}I{{</katex>}} is a finite input alphabet. Each symbol in the input alphabet represents a possible input that the FST can read.
+- {{< katex >}}\delta{{</katex>}} is the transition function. It maps a state and an input symbol to a new state.
+- {{< katex >}}q_0{{</katex>}} is the initial state. This is the state that the FST starts in when it is first activated.
+- {{< katex >}}F{{</katex>}} is the set of final states. A state is a final state if it represents a valid output.
+- {{< katex >}}O{{</katex>}} is the output alphabet. Each symbol in the output alphabet represents a possible output that the FST can produce.
+- {{< katex >}}\eta{{</katex>}} is the output function. It maps a state and an input symbol to a sequence of output symbols.
+The rule that all of these variables follow is that they must be finite. This means that there can only be a finite number of states, input symbols, final states, and output symbols. This is because an FST is a finite-state machine, which is a machine that can only be in a finite number of states at any given time.
+
 **Remark**
 - the condition for acceptance remains the same as in acceptors
 - the translation is performed only on accepted strings
