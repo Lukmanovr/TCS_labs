@@ -1,5 +1,5 @@
 ---
-title: Lab Session 2
+title: Lab 2 - FSA
 type: docs
 weight: 2
 BookToC: true

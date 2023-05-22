@@ -1,5 +1,5 @@
 ---
-title: Lab Session 9
+title: Lab 9 - NDPDA
 type: docs
 weight: 9
 BookToC: true

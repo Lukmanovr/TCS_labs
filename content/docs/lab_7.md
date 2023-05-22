@@ -1,5 +1,5 @@
 ---
-title: Lab Session 7
+title: Lab 7 - TM
 type: docs
 weight: 7
 BookToC: true

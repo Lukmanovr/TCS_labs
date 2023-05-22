@@ -1,5 +1,5 @@
 ---
-title: Lab Session 1
+title: Lab 1 - Sets
 type: docs
 weight: 1
 BookToC: true

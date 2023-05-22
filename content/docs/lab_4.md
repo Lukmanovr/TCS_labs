@@ -1,5 +1,5 @@
 ---
-title: Lab Session 4
+title: Lab 4 - PL
 type: docs
 weight: 4
 BookToC: true

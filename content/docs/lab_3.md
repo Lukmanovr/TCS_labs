@@ -1,5 +1,5 @@
 ---
-title: Lab Session 3
+title: Lab 3 - FST
 type: docs
 weight: 3
 BookToC: true

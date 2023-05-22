@@ -1,5 +1,5 @@
 ---
-title: Lab Session 10
+title: Lab 10 - RegExp
 type: docs
 weight: 10
 BookToC: true

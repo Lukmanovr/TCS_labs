@@ -1,5 +1,5 @@
 ---
-title: Lab Session 8
+title: Lab 8 - NDFSA
 type: docs
 weight: 8
 BookToC: true

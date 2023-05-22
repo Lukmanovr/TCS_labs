@@ -1,5 +1,5 @@
 ---
-title: Lab Session 12
+title: Lab 12 - Grammars
 type: docs
 weight: 12
 BookToC: true
