@@ -6,7 +6,7 @@ BookToC: true
 # markup: 'mmark'
 ---
 # **Lab Session #3**
-## **Agenda**
+# **Agenda**
 
 - Finite State Transducers
 - Exercises on Finite State Transducer

@@ -4,9 +4,9 @@ type: docs
 weight: 10
 BookToC: true
 ---
-# Lab #10
+# **Lab Session #10**
 
-## Agenda
+# Agenda
 
 1) RegExp to (N)FSA: Thompson’s Construction
 2) FSA to RegExp: Kleene’s Algorithm

@@ -5,9 +5,9 @@ weight: 12
 BookToC: true
 ---
 
-# Lab #12
+# **Lab Session #12**
 
-## Agenda
+# Agenda
 
 {{<button href="http://localhost:1313/docs/lab12/#grammars">}} Generative Grammars {{</button>}} 
 {{<button href="http://localhost:1313/docs/lab12/#chomsky-hierarchy">}} Chomsky Hierarchy {{</button>}} 

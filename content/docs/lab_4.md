@@ -4,24 +4,51 @@ type: docs
 weight: 4
 BookToC: true
 ---
-# Lab #4
+# **Lab Session #4**
 
-## Agenda
+# **Agenda**
 
 - Recap: Pumping lemma
 - Exercises  
 
-## Pumping lemma
+## **Pumping lemma**
 
-Given a regular language {{< katex >}} \bf L {{< /katex >}} \
-there exists an integer (critical length) {{< katex >}} \bf m {{< /katex >}} such that \
-for any string {{< katex >}} \bf w \isin L {{< /katex >}} with length {{< katex >}} \bf |w| \ge m {{< /katex >}} \
-we can find a split {{< katex >}} \bf w = x \ y \ z {{< /katex >}} such that:
-- {{< katex >}} \bf |x \ y| \leq m {{< /katex >}}
+{{< hint info >}}
+In the theory of formal languages, the pumping lemma for regular languages is a lemma that describes an essential property of all regular languages. Informally, it says that all sufficiently long strings in a regular language may be pumped—that is, have a middle section of the string repeated an arbitrary number of times—to produce a new string that is also part of the language.
+{{< /hint >}}
+The pumping lemma is stated as follows:
+
+Given a regular language {{< katex >}} \bf L {{< /katex >}} there exists an integer (critical length) {{< katex >}} \bf m {{< /katex >}} such that for any string {{< katex >}} \bf w \isin L {{< /katex >}} with length {{< katex >}} \bf |w| \ge m {{< /katex >}} we can find a split {{< katex >}} \bf w = x y z {{< /katex >}} such that:
+- {{< katex >}} \bf |xy| \leq m {{< /katex >}}
 - {{< katex >}} {\bf |y|} \ge 1 {{< /katex >}}
-- {{< katex >}} \bf x \ y^i \ z \isin L {{< /katex >}} for all {{< katex >}} i \ge 0 {{< /katex >}}
+- {{< katex >}} \bf xy^iz \isin L {{< /katex >}} for all {{< katex >}} i \ge 0 {{< /katex >}}
 
-## Pumping lemma: contrapositive
+The pumping lemma can be used to prove that a language is not regular by finding a string in the language that does not satisfy the pumping lemma. For example, the language of all strings that are balanced parentheses is not regular. The string "(()" can be pumped to produce the strings "()()" and "(())", but the latter string is not balanced.
+
+The pumping lemma is a powerful tool for proving that a language is not regular. However, it is important to note that the pumping lemma does not prove that a language is regular. A language that satisfies the pumping lemma may still be irregular.
+
+Here are some examples of regular languages:
+
+- The language of all strings of 0s and 1s
+- The language of all strings of lowercase letters
+- The language of all strings of uppercase letters
+- The language of all strings of digits
+
+Here are some examples of languages that are not regular:
+
+- The language of all strings that are balanced parentheses
+- The language of all strings that are palindromes
+- The language of all strings that are prime numbers
+  
+The pumping lemma is a useful tool for understanding the structure of regular languages. It can be used to prove that a language is not regular, and it can also be used to help design regular expressions.
+
+
+## **Pumping lemma: contrapositive**
+
+{{< hint warning >}}
+The contrapositive of a statement is the statement that reverses and negates both the hypothesis and the conclusion. In other words, the contrapositive of a statement is true if and only if the negation of the conclusion is true.
+{{< /hint >}}
+
 Given a language {{< katex >}} \bf L {{< /katex >}}. If we show that \
 **for any** integer {{< katex >}} m \ge 1 {{< /katex >}} \
 **there exists** a string {{< katex >}} w \isin L {{< /katex >}} such that {{< katex >}} |w| \ge m {{< /katex >}} \
@@ -36,7 +63,7 @@ Then, applying the Pumping lemma for regular languages, one can
 deduce that {{< katex >}} L {{< /katex >}} is not regular.
 
 ---
-## Exercises
+## **Exercises**
 Using Pumping lemma prove that {{< katex >}} L_1, \ L_2, \ L_3 {{< /katex >}} and {{< katex >}} L_4 {{< /katex >}} are not regular
 languages:
 1. {{< katex >}} L_1 = \{vv^R | v \isin \Sigma_1^* \} \ {{< /katex >}}  where  {{< katex >}} \ \Sigma_1 = \{a, \ b\} {{< /katex >}}
