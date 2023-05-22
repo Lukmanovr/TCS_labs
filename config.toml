@@ -1,6 +1,6 @@
 baseURL = 'https://tcs-labs.netlify.app/'
 languageCode = 'en-us'
-title = 'TCS➡️IU'
+title = 'TCS-IU'
 
 
 # Needed for mermaid/katex shortcodes
