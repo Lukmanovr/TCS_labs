@@ -13,24 +13,24 @@ BookToC: true
 
 ------
 
-## PD transducer
+## PD Transducer
 ### **Formal definition**
 
 A Pushdown Transducer (PDT) is a tuple {{< katex >}} T = ⟨Q, I, Γ, δ, q_0, Z_0, F⟩ {{< /katex >}} where:
 
-- {{< katex >}}Q{{< /katex >}} is a finite set of states;
+- {{< katex >}}Q{{< /katex >}} is a finite set of states.
 
-- {{< katex >}}I{{< /katex >}} and {{< katex >}}Γ{{< /katex >}} are the finite sets, the input and stack alphabets.;
+- {{< katex >}}I{{< /katex >}} and {{< katex >}}Γ{{< /katex >}} are the finite sets, the input and stack alphabets.
 
 - {{< katex >}}δ{{< /katex >}}, the transition function, is a partial function from {{< katex >}} (Q)×(I \cup \{ε\}) × (Γ) {{< /katex >}} to the set of finite subsets of {{< katex >}}(Q)×(Γ^*){{< /katex >}}
 
-- {{< katex >}}q_0 \in Q{{< /katex >}} is the initial state;
+- {{< katex >}}q_0 \in Q{{< /katex >}} is the initial state.
 
-- {{< katex >}}Z_0 \in Γ{{< /katex >}} is the initial stack symbol;
+- {{< katex >}}Z_0 \in Γ{{< /katex >}} is the initial stack symbol.
 
 - {{< katex >}}F \subseteq Q{{< /katex >}} is the set of accepting states.
 
-- {{< katex >}}O{{< /katex >}} is the output alphabet
+- {{< katex >}}O{{< /katex >}} is the output alphabet.
 
 - {{< katex >}}η : Q×(I \cup \{ε\})× Γ → Q^*{{< /katex >}}
 
@@ -67,13 +67,13 @@ A Pushdown Transducer (PDT) is a tuple {{< katex >}} T = ⟨Q, I, Γ, δ, q_0, Z
 
 Build DPDT that accepts the following laguages:
 
-- {{< katex >}} L_1 = \{a^nb^ma^n | n \geq 1 \wedge m \leq 1\}{{< /katex >}}, and translates it into {{< katex >}}a^nb^m {{< /katex >}}
+- {{< katex >}} L_1 = \{a^nb^ma^n | n \geq 1 \wedge m \geq 1\}{{< /katex >}}, and translates it into {{< katex >}}a^nb^m {{< /katex >}}
 
-- {{< katex >}} L_2 = \{a^ib^ic^k | i, j, k \in \mathbb{N} {{< /katex >}} and {{< katex >}} i + k = j\} {{< /katex >}}, and translates it into {{< katex >}}a^ib^ic^k{{< /katex >}}
+- {{< katex >}} L_2 = \{a^ib^jc^k | i, j, k \in \mathbb{N} {{< /katex >}} and {{< katex >}} i + k = j\} {{< /katex >}}, and translates it into {{< katex >}}a^ib^ic^k{{< /katex >}}
 
-- {{< katex >}}L_3 = \{xcy | x, y \in \{a, b\}^* \wedge |x| > 0 \wedge |y| > 0 \wedge y \neq x^R\} {{< /katex >}}, (where {{< katex >}} x^R {{< /katex >}}) is the reversed string {{< katex >}} x {{< /katex >}}, the alphabet is {{< katex >}}I = \{a, b, c\} {{< /katex >}} and translates it into {{< katex >}} y {{< /katex >}}
+- {{< katex >}}L_3 = \{xcy | x, y \in \{a, b\}^* \wedge |x| > 0 \wedge |y| > 0 \wedge y \neq x^R\} {{< /katex >}}, (where {{< katex >}} x^R {{< /katex >}} is the reversed string {{< katex >}} x {{< /katex >}}), the alphabet is {{< katex >}}I = \{a, b, c\} {{< /katex >}} and translates it into {{< katex >}} y {{< /katex >}}
 
-- {{< katex >}}L_4 = \{a^mb^m | m, n \in \mathbb{N} {{< /katex >}} and {{< katex >}} n \leq m \leq 2n\} {{< /katex >}}, and translates it into {{< katex >}}a^nb^n{{< /katex >}}
+- {{< katex >}}L_4 = \{a^nb^m | m, n \in \mathbb{N} {{< /katex >}} and {{< katex >}} n \leq m \leq 2n\} {{< /katex >}}, and translates it into {{< katex >}}a^nb^n{{< /katex >}}
 
 ------
 
@@ -83,13 +83,13 @@ Build DPDT that accepts the following laguages:
 
 **Solution(1)**:
 
-<p> A PDT that accepts {{< katex >}} L_1 = \{a^nb^ma^n | n \geq 1 \wedge m \leq 1\}{{< /katex >}}, and translates it into {{< katex >}}a^nb^m {{< /katex >}} </p>
+<p> A PDT that accepts {{< katex >}} L_1 = \{a^nb^ma^n | n \geq 1 \wedge m \geq 1\}{{< /katex >}}, and translates it into {{< katex >}}a^nb^m {{< /katex >}} </p>
 
 ![Solution 2_1](/images/lab6/ex_2.1_sol.svg)
 
 **Solution(2)**:
 
-<p> A PDT that accepts {{< katex >}} L_2 = \{a^ib^ic^k | i, j, k \in \mathbb{N}\ and\ i + k = j\} {{< /katex >}}, and translates it into {{< katex >}}a^ib^ic^k{{< /katex >}}
+<p> A PDT that accepts {{< katex >}} L_2 = \{a^ib^jc^k | i, j, k \in \mathbb{N}\ and\ i + k = j\} {{< /katex >}}, and translates it into {{< katex >}}a^ib^ic^k{{< /katex >}}
 
 ![Solution 2_2](/images/lab6/ex_2.2_sol.svg)
 
