@@ -1,5 +1,5 @@
 ---
-title: Lab 6 - TM
+title: Lab 6 - PDT
 type: docs
 weight: 6
 BookToC: true
