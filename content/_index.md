@@ -4,9 +4,15 @@ type: docs
 toc: false
 ---
 
-# TCS course at the Innopolis University
+# **TCS course at the Innopolis University**
 **Welcome to the Theoretical Computer Science Lab sessions website!**
-{{< columns >}}
+
+
+{{< hint info >}}
+**Disclaimer**  
+We are always looking for ways to improve the Theoretical Computer Science Lab sessions website and make it a valuable resource for our students. That's why we welcome and encourage your participation in making the website better.  
+{{< /hint >}}
+
 Here, you will find all the resources and information you need to successfully complete the lab sessions. The lab sessions are designed to provide hands-on experience with the concepts and techniques covered in the theoretical computer science course. You will have the opportunity to work on challenging problems, conduct experiments, and implement algorithms.
 
 We will cover a wide range of topics, including formal languages, automata, complexity theory, algorithms, and more. You will have the chance to apply your knowledge to real-world problems and gain a deeper understanding of the concepts.
@@ -16,12 +22,8 @@ Throughout the lab sessions, you will have the support and guidance of our exper
 We encourage you to actively participate in the lab sessions and make the most of this learning opportunity. The website will be updated regularly with the lab schedule, instructions, and materials, so please check it frequently.
 
 We look forward to working with you and exploring the exciting world of theoretical computer science.  
-{{< /columns >}}  
 
-{{< hint info >}}
-**Disclaimer**  
-We are always looking for ways to improve the Theoretical Computer Science Lab sessions website and make it a valuable resource for our students. That's why we welcome and encourage your participation in making the website better.  
-{{< /hint >}}
+
 There are a few ways you can get involved:
 - You can provide feedback on the website's content and organization.
 - You can suggest new features or resources that you think would be helpful.
